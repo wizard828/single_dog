@@ -4,7 +4,7 @@
 
 <html>
 <head>
-<title>NewsTest Home</title>
+<title>NewsTest HomePage</title>
 </head>
 <body bgcolor='white'>
 

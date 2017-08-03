@@ -1,0 +1,22 @@
+/*sticky footer css  好像沒用到*/
+@media (max-width:768px){ .footer{position:absolute;width:100%;} }
+@media (min-width:768px){ .footer{position:absolute;bottom:0;height:60px;width:100%;}}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+
+.footer {
+  position: absolute;
+  bottom: 5em;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 30px;
+  background-color: #f5f5f5;
+}

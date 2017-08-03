@@ -1,0 +1,44 @@
+/* Mobile */
+@media (max-width: 767px) {
+.carousel-inner {
+        height: 100%;
+}
+
+.carousel-inner>img {
+        width: 100%;
+    }
+}
+
+/* tablets */
+@media (max-width: 991px) and (min-width: 768px) {
+    .carousel-inner {
+        height: auto;
+    }
+
+    .carousel-inner>img {
+        width: 100%;
+    }
+
+}
+
+/* laptops */
+@media (max-width: 1023px) and (min-width: 992px) {
+    .carousel-inner {
+        height: 100%;
+    }
+    .carousel-inner>img {
+        width: 100%;
+    }    
+}
+
+/* desktops */
+@media (min-width: 1024px) {
+.carousel-inner {
+        height: 100%;
+}
+
+.carousel-inner>img {
+        width: 100%;
+    }
+}
+

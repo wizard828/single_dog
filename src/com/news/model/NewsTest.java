@@ -1,5 +1,6 @@
 package com.news.model;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class NewsTest {
@@ -48,6 +49,8 @@ public class NewsTest {
 		// System.out.println("找完惹");
 
 		// content查詢
+		List<News> newsList = new ArrayList<>();
+		for (News news : newsList) {
 		News news5 = dao.findByContent("公告內容在這");
 		System.out.println(news5.getNewsNo());
 		System.out.println(news5.getEmpNo());
@@ -55,9 +58,10 @@ public class NewsTest {
 		System.out.println(news5.getNewsContent());
 		System.out.println(news5.getNewsDate());
 		System.out.println("找完惹");
-
+		}
+		
 		// 查全部
-		// List<News> newsList = dao.getAll();
+		// List<News> newsList = new ArrayList<>();
 		// for (News news : newsList) {
 		// System.out.println(news.getNewsNo());
 		// System.out.println(news.getEmpNo());

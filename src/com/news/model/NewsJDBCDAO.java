@@ -193,8 +193,9 @@ public class NewsJDBCDAO implements NewsDAO_Interface {
 	}
 	
 	@Override
-    public News findByTitle(String newsTitle) {
-        PreparedStatement pstmt=null;
+    public List<News> findByTitle(String newsTitle) {
+		List<News> newsList = new ArrayList<>();
+		PreparedStatement pstmt=null;
         Connection con=null;
         ResultSet rs=null;
         News news=null;
@@ -213,6 +214,7 @@ public class NewsJDBCDAO implements NewsDAO_Interface {
                 news.setNewsTitle(rs.getString("newsTitle"));
                 news.setNewsContent(rs.getString("newsContent"));
                 news.setNewsDate(rs.getTimestamp("newsDate"));
+                newsList.add(news);
                 	                
             }
              
@@ -244,12 +246,13 @@ public class NewsJDBCDAO implements NewsDAO_Interface {
                 }
             }
         }
-        return news;
+        return newsList;
     }
 	
 	@Override
-    public News findByContent(String newsContent) {
-        PreparedStatement pstmt=null;
+    public List<News> findByContent(String newsContent) {
+		List<News> newsList = new ArrayList<>();
+		PreparedStatement pstmt=null;
         Connection con=null;
         ResultSet rs=null;
         News news=null;
@@ -268,6 +271,7 @@ public class NewsJDBCDAO implements NewsDAO_Interface {
                 news.setNewsTitle(rs.getString("newsTitle"));
                 news.setNewsContent(rs.getString("newsContent"));
                 news.setNewsDate(rs.getTimestamp("newsDate"));
+                newsList.add(news);
                 	                
             }
              
@@ -299,7 +303,7 @@ public class NewsJDBCDAO implements NewsDAO_Interface {
                 }
             }
         }
-        return news;
+        return newsList;
     }
 
 	@Override

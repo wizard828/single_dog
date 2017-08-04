@@ -1,23 +1,22 @@
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="Big5"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ page import="com.news.model.*"%>
 
 <%-- 絤策蹦ノ Script 糶猭 --%>
-
 <%--  Concroller EmpServlet.javarequestEmpVOン--%>
-<% News news = (News) request.getAttribute("news");%>
-
 <%--  癸莱DeptVOン--%>
 
 <html>
 <head>
-<title>程穝 - listOneEmp.jsp</title>
+<title>程穝琩高 - listRealtive.jsp</title>
 </head>
 <body bgcolor='white'>
-<b><font color=red>絤策蹦ノ Script 糶猭:</font></b>
+<b><font color=red>禬瞡der~扒~</font></b>
 <table border='1' cellpadding='5' cellspacing='0' width='800'>
 	<tr bgcolor='#CCCCFF' align='center' valign='middle' height='20'>
 		<td>
-		<h3>程穝狠琩高 - ListOneNews.jsp</h3>
+		<h3>程穝狠琩高 - ListRealtiveNews.jsp</h3>
 		<a href="<%=request.getContextPath()%>/select_page.jsp"><img src="" width="" height="" border=""></a>
 		</td>
 	</tr>
@@ -32,18 +31,17 @@
 		<th>祇穝ら戳</th>
 		
 	</tr>
+	<c:forEach var="news" items="${newsList}" >
 	<tr align='center' valign='middle'>
-<%--	EL糶猭	--%>
-<%-- 		<td>${news.newsNo}</td> --%>
-<%--  		<td>${news.empNo}</td> --%>
-		
-		<td><%=news.getNewsNo()%></td>
- 		<td><%=news.getEmpNo()%></td>
- 		<td><%=news.getNewsTitle()%></td>
- 		<td><%=news.getNewsContent()%></td>
- 		<td><%=news.getNewsDate()%></td>
+		<td>${news.newsNo}</td>
+ 		<td>${news.empNo}</td>
+ 		<td>${news.newsTitle}</td>
+ 		<td>${news.newsContent}</td>
+ 		<td><fmt:formatDate  pattern="yyyy-MM-dd HH:mm:ss" value="${news.newsDate}"/> </td>
+<%--  	<td><fmt:formatDate  pattern="yyyy-MM-dd HH:mm:ss" value="${news.newsDate}"/> </td> --%>
 		
 	</tr>
+	</c:forEach>
 </table>
 
 </body>

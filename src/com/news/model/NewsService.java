@@ -47,11 +47,11 @@ public class NewsService {
 		return dao.findByPrimaryKey(newsNo);
 	}
 	
-	public News findByTitle(String newsTitle){
+	public List<News> findByTitle(String newsTitle){
 		return dao.findByTitle(newsTitle);
 	}
 
-	public News findByContent(String newsContent){
+	public List<News> findByContent(String newsContent){
 		return dao.findByContent(newsContent);
 	}
 

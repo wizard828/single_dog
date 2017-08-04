@@ -60,7 +60,7 @@
        <b>块程穝夹肈:</b>
        <input type="text" name="newsTitle">
        <input type="submit" value="琩高">
-       <input type="hidden" name="action" value="getOne_For_Title">
+       <input type="hidden" name="action" value="getRealtive_For_Title">
      </FORM>
   </li>
   
@@ -69,7 +69,7 @@
        <b>块程穝ず甧:</b>
        <input type="text" name="newsContent">
        <input type="submit" value="琩高">
-       <input type="hidden" name="action" value="getOne_For_Content">
+       <input type="hidden" name="action" value="getRealtive_For_Content">
      </FORM>
   </li>
   

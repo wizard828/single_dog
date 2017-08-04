@@ -85,7 +85,7 @@ public class NewsServlet extends HttpServlet {
 				
 				/***************************3.查詢完成,準備轉交(Send the Success view)*************/
 				req.setAttribute("news", news); // 資料庫取出的empVO物件,存入req
-				String url = "../about_us/news/listOne.jsp";
+				String url = "/back_end/about_us/news/listRealtive.jsp";
 				RequestDispatcher successView = req.getRequestDispatcher(url); // 成功轉交listOneEmp.jsp
 				successView.forward(req, res);
 
@@ -99,7 +99,7 @@ public class NewsServlet extends HttpServlet {
 		}
 
 //		用title查
-		if ("getOne_For_Title".equals(action)) { // 來自select_page.jsp的請求
+		if ("getRealtive_For_Title".equals(action)) { // 來自select_page.jsp的請求
 
 			List<String> errorMsgs = new LinkedList<String>();
 			// Store this set in the request scope, in case we need to
@@ -130,8 +130,8 @@ public class NewsServlet extends HttpServlet {
 				
 				/***************************2.開始查詢資料*****************************************/
 				NewsService newsService = new NewsService();
-				News news = newsService.findByTitle(newsTitle);
-				if (news == null) {
+				List<News> newsList = newsService.findByTitle(newsTitle);
+				if (newsList.isEmpty()) {
 					errorMsgs.add("查無資料");
 				}
 				// Send the use back to the form, if there were errors
@@ -143,8 +143,8 @@ public class NewsServlet extends HttpServlet {
 				}
 				
 				/***************************3.查詢完成,準備轉交(Send the Success view)*************/
-				req.setAttribute("news", news); // 資料庫取出的empVO物件,存入req
-				String url = "/back_end/about_us/news/listOne.jsp";
+				req.setAttribute("newsList", newsList); // 資料庫取出的empVO物件,存入req
+				String url = "/back_end/about_us/news/listRealtive.jsp";
 				RequestDispatcher successView = req.getRequestDispatcher(url); // 成功轉交listOneEmp.jsp
 				successView.forward(req, res);
 
@@ -158,7 +158,7 @@ public class NewsServlet extends HttpServlet {
 		}
 		
 //		用content查
-		if ("getOne_For_Content".equals(action)) { // 來自select_page.jsp的請求
+		if ("getRealtive_For_Content".equals(action)) { // 來自select_page.jsp的請求
 
 			List<String> errorMsgs = new LinkedList<String>();
 			// Store this set in the request scope, in case we need to
@@ -189,8 +189,8 @@ public class NewsServlet extends HttpServlet {
 				
 				/***************************2.開始查詢資料*****************************************/
 				NewsService newsService = new NewsService();
-				News news = newsService.findByContent(newsContent);
-				if (news == null) {
+				List<News> newsList = newsService.findByContent(newsContent);
+				if (newsList.isEmpty()) {
 					errorMsgs.add("查無資料");
 				}
 				// Send the use back to the form, if there were errors
@@ -202,8 +202,8 @@ public class NewsServlet extends HttpServlet {
 				}
 				
 				/***************************3.查詢完成,準備轉交(Send the Success view)*************/
-				req.setAttribute("news", news); // 資料庫取出的empVO物件,存入req
-				String url = "/back_end/about_us/news/listOne.jsp";
+				req.setAttribute("newsList", newsList); // 資料庫取出的empVO物件,存入req
+				String url = "/back_end/about_us/news/listRealtive.jsp";
 				RequestDispatcher successView = req.getRequestDispatcher(url); // 成功轉交listOneEmp.jsp
 				successView.forward(req, res);
 

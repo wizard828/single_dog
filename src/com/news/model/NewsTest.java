@@ -5,6 +5,9 @@ import java.util.List;
 
 public class NewsTest {
 
+	/**
+	 * @param args
+	 */
 	public static void main(String[] args) {
 		NewsJDBCDAO dao = new NewsJDBCDAO();
 
@@ -40,35 +43,37 @@ public class NewsTest {
 		// System.out.println("тЧ稴");
 
 		// title琩高
-		// News news4 = dao.findByTitle("硂琌そ");
-		// System.out.println(news4.getNewsNo());
-		// System.out.println(news4.getEmpNo());
-		// System.out.println(news4.getNewsTitle());
-		// System.out.println(news4.getNewsContent());
-		// System.out.println(news4.getNewsDate());
-		// System.out.println("тЧ稴");
+		List<News> newsList = dao.findByTitle("そ");
+		for (News news : newsList) {
+			System.out.println(news.getNewsNo());
+			System.out.println(news.getNewsNo());
+			System.out.println(news.getEmpNo());
+			System.out.println(news.getNewsTitle());
+			System.out.println(news.getNewsContent());
+			System.out.println(news.getNewsDate());
+			System.out.println("тЧ稴");
+		}
 
 		// content琩高
-		List<News> newsList = new ArrayList<>();
-		for (News news : newsList) {
-		News news5 = dao.findByContent("そず甧硂");
-		System.out.println(news5.getNewsNo());
-		System.out.println(news5.getEmpNo());
-		System.out.println(news5.getNewsTitle());
-		System.out.println(news5.getNewsContent());
-		System.out.println(news5.getNewsDate());
-		System.out.println("тЧ稴");
-		}
-		
-		// 琩场
-		// List<News> newsList = new ArrayList<>();
+		// List<News> newsList = dao.findByContent("ず甧");
 		// for (News news : newsList) {
 		// System.out.println(news.getNewsNo());
 		// System.out.println(news.getEmpNo());
 		// System.out.println(news.getNewsTitle());
 		// System.out.println(news.getNewsContent());
 		// System.out.println(news.getNewsDate());
-		// System.out.println("===================");
+		// System.out.println("тЧ稴");
+		// }
+
+		// 琩场
+		// List<News> newsList = dao.getAll();
+		// for (News news : newsList) {
+		// System.out.println(news.getNewsNo());
+		// System.out.println(news.getEmpNo());
+		// System.out.println(news.getNewsTitle());
+		// System.out.println(news.getNewsContent());
+		// System.out.println(news.getNewsDate());
+		// System.out.println("тЧ稴");
 		// }
 
 	}

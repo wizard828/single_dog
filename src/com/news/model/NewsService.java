@@ -47,6 +47,10 @@ public class NewsService {
 		return dao.findByPrimaryKey(newsNo);
 	}
 	
+//	public List<News> findByEmpNo(Integer empNo){
+//		return dao.findByEmpNo(empNo);
+//	}
+	
 	public List<News> findByTitle(String newsTitle){
 		return dao.findByTitle(newsTitle);
 	}

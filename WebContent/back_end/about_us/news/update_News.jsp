@@ -21,8 +21,8 @@
 	</tr>
 </table>
 
-<h3>資料修改:</h3>
-錯誤表列
+<h3>最新消息修改/刪除:</h3>
+<!-- 錯誤表列   -->
 <c:if test="${not empty errorMsgs}">
 	<font color='red'>請修正以下錯誤:
 	<ul>
@@ -49,7 +49,7 @@
 	</tr>
 	<tr>
 		<td>最新消息標題:</td>
-		<td><input type="TEXT" name="newsTitle" size="45"	value="<%=news.getNewsTitle()%>" /></td>
+		<td><input type="TEXT" name="newsTitle" size="30"	value="<%=news.getNewsTitle()%>" /></td>
 	</tr>
 		<tr>
 		<td>最新消息內容:</td>

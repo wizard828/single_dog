@@ -29,9 +29,9 @@ public class NewsDAO implements NewsDAO_Interface{
 	    private static final String UPDATE_STMT = "UPDATE News SET newsTitle = ?, newsContent = ?, newsDate = SYSDATE WHERE NewsNo = ?";
 	    private static final String DELETE_STMT = "DELETE FROM News WHERE newsNO = ?";
 	    private static final String FIND_BY_PK = "SELECT * FROM News WHERE NewsNO = ?";
-	    private static final String FIND_BY_TITLE = "SELECT * FROM News WHERE newsTitle Like ?";
-	    private static final String FIND_BY_CONTENT = "SELECT * FROM News WHERE newsContent Like ?";
-	    private static final String GET_ALL = "SELECT * FROM News";
+	    private static final String FIND_BY_TITLE = "SELECT * FROM News WHERE newsTitle Like ? order by newsDate desc";
+	    private static final String FIND_BY_CONTENT = "SELECT * FROM News WHERE newsContent Like ? order by newsDate desc";
+	    private static final String GET_ALL = "SELECT * FROM News order by newsDate desc";
 	    
 	    @Override
 	    public void insert(News news) {
@@ -205,6 +205,7 @@ public class NewsDAO implements NewsDAO_Interface{
 	        try {
 	            con=ds.getConnection();
 	            pstmt=con.prepareStatement(FIND_BY_TITLE);
+	            
 	            pstmt.setString(1, "%" + newsTitle + "%");
 	            rs=pstmt.executeQuery();
 	            while(rs.next()){
@@ -257,6 +258,7 @@ public class NewsDAO implements NewsDAO_Interface{
 	        try {
 	            con=ds.getConnection();
 	            pstmt=con.prepareStatement(FIND_BY_CONTENT);
+	            
 	            pstmt.setString(1, "%" + newsContent + "%");
 	            rs=pstmt.executeQuery();
 	            while(rs.next()){

@@ -40,18 +40,32 @@
     </FORM>
   </li>
 
-  <jsp:useBean id="newsService" scope="page" class="com.news.model.NewsService" />
+<%--   <jsp:useBean id="EmpService" scope="page" class="com.Emp.model.EmpService" /> --%>
    
   <li>
+
      <FORM METHOD="post" ACTION="<%=request.getContextPath()%>/back_end/news/news.do" >
        <b>選擇員工編號:</b>
-       <select size="1" name="empno">
+       <select size="1" name="empNo">
          <c:forEach var="emp" items="${empSvc.all}" > 
           <option value="${emp.empno}">${emp.empno}
          </c:forEach>   
        </select>
        <input type="submit" value="送出">
-       <input type="hidden" name="action" value="getOne_For_Display">
+       <input type="hidden" name="action" value="getEmpNo_For_Display">
+    </FORM>
+  </li>
+
+<li>
+     <FORM METHOD="post" ACTION="<%=request.getContextPath()%>/back_end/news/news.do" >
+       <b>選擇員工姓名:</b>
+       <select size="1" name="empName">
+         <c:forEach var="empname" items="${empSvc.all}" > 
+          <option value="${emp.empname}">${emp.empname}
+         </c:forEach>   
+       </select>
+       <input type="submit" value="送出">
+       <input type="hidden" name="action" value="getEmpName_For_Display">
     </FORM>
   </li>
   

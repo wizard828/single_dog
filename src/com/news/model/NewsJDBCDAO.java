@@ -20,9 +20,15 @@ public class NewsJDBCDAO implements NewsDAO_Interface {
 	private static final String UPDATE_STMT = "UPDATE News SET newsTitle = ?, newsContent = ?, newsDate = ? WHERE newsNO = ?";
 	private static final String DELETE_STMT = "DELETE FROM News WHERE newsNO = ?";
 	private static final String FIND_BY_PK = "SELECT * FROM News WHERE newsNO = ?";
-	private static final String FIND_BY_TITLE = "SELECT * FROM News WHERE newsTitle Like ?";
-	private static final String FIND_BY_CONTENT = "SELECT * FROM News WHERE newsContent Like ?";
-	private static final String GET_ALL = "SELECT * FROM News";
+//	private static final String FIND_BY_EMPNO = "SELECT * FROM News LEFT OUTER JOIN Emp ON news.empno = emp.empno WHERE emp.empno = ? ORDER BY newsDate DESC";
+	private static final String FIND_BY_TITLE = "SELECT * FROM News WHERE newsTitle Like ? order by newsDate desc";
+	private static final String FIND_BY_CONTENT = "SELECT * FROM News WHERE newsContent Like ? order by newsDate desc";
+	private static final String GET_ALL = "SELECT * FROM News order by newsDate desc";
+	
+//	findByEmpName
+//	select * from news LEFT OUTER JOIN emp on news.empno = emp.empno where emp.empname = ?'%¥Ã%' order by newsdate DESC;
+//	findByEmpNo
+//	select * from news LEFT OUTER JOIN emp on news.empno = emp.empno where emp.empno = ? order by newsdate DESC;
 
 	@Override
 	public void insert(News news) {
@@ -191,6 +197,58 @@ public class NewsJDBCDAO implements NewsDAO_Interface {
 		}
 		return news;
 	}
+	
+//	@Override
+//	public List<News> findByEmpNo(int empNo) {
+//		List<News> newsList = new ArrayList<>();
+//		PreparedStatement pstmt = null;
+//		Connection con = null;
+//		ResultSet rs = null;
+//		News news = null;
+//
+//		try {
+//			Class.forName(driver);
+//			con = DriverManager.getConnection(url, userid, passwd);
+//			pstmt = con.prepareStatement(FIND_BY_EMPNO);
+//
+//			pstmt.setInt(1, empNo);
+//			rs = pstmt.executeQuery();
+//			while (rs.next()) {
+//				news = new News();
+//				news.setNewsNo(rs.getInt("newsNo"));
+//				news.setEmpNo(rs.getInt("empNo"));
+//				news.setNewsTitle(rs.getString("newsTitle"));
+//				news.setNewsContent(rs.getString("newsContent"));
+//				news.setNewsDate(rs.getTimestamp("newsDate"));
+//				newsList.add(news);
+//
+//			}
+//
+//			// Handle any driver errors
+//		} catch (ClassNotFoundException e) {
+//			throw new RuntimeException("Couldn't load database driver. " + e.getMessage());
+//			// Handle any SQL errors
+//		} catch (SQLException se) {
+//			throw new RuntimeException("A database error occured. " + se.getMessage());
+//			// Clean up JDBC resources
+//		} finally {
+//			if (pstmt != null) {
+//				try {
+//					pstmt.close();
+//				} catch (SQLException se) {
+//					se.printStackTrace(System.err);
+//				}
+//			}
+//			if (con != null) {
+//				try {
+//					con.close();
+//				} catch (Exception e) {
+//					e.printStackTrace(System.err);
+//				}
+//			}
+//		}
+//		return newsList;
+//	}
 	
 	@Override
     public List<News> findByTitle(String newsTitle) {

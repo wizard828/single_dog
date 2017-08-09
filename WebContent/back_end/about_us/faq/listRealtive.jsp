@@ -17,7 +17,7 @@
 	<tr bgcolor='#CCCCFF' align='center' valign='middle' height='20'>
 		<td>
 		<h3>最新消息後端查詢 - ListRealtiveNews.jsp</h3>
-		<a href="<%=request.getContextPath()%>/back_end/about_us/news/news_select_page.jsp"><img src="" width="" height="" border="">回首頁</a>
+		<a href="<%=request.getContextPath()%>/back_end/about_us/faq/faq_select_page.jsp"><img src="" width="" height="" border="">回首頁</a>
 		</td>
 	</tr>
 </table>
@@ -29,8 +29,6 @@
 		<th>最新消息標題</th>
 		<th>最新消息內容</th>
 		<th>發佈（更新）日期</th>
-		<th>修改</th>
-		<th>刪除</th>
 		
 	</tr>
 	<c:forEach var="news" items="${newsList}" >
@@ -41,21 +39,6 @@
  		<td>${news.newsContent}</td>
  		<td><fmt:formatDate  pattern="yyyy-MM-dd HH:mm:ss" value="${news.newsDate}"/> </td>
 <%--  	<td><fmt:formatDate  pattern="yyyy-MM-dd HH:mm:ss" value="${news.newsDate}"/> </td> --%>
-		
-		<td>
-			  <FORM METHOD="post" ACTION="<%=request.getContextPath()%>/back_end/news/news.do">
-			     <input type="submit" value="修改"> 
-			     <input type="hidden" name="newsNo" value="${news.newsNo}">
-			     <input type="hidden" name="requestURL"	value="<%=request.getServletPath()%>"><!--送出本網頁的路徑給Controller-->
-			     <input type="hidden" name="action"	value="update"></FORM>
-			</td>
-			<td>
-			  <FORM METHOD="post" ACTION="<%=request.getContextPath()%>/back_end/news/news.do">
-			    <input type="submit" value="刪除">
-			    <input type="hidden" name="newsNo" value="${news.newsNo}">
-			    <input type="hidden" name="requestURL"	value="<%=request.getServletPath()%>"><!--送出本網頁的路徑給Controller-->
-			    <input type="hidden" name="action"value="delete"></FORM>
-			</td>
 		
 	</tr>
 	</c:forEach>

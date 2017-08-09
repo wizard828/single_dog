@@ -13,14 +13,14 @@ public class NewsService {
 		dao = new NewsDAO();
 	}
 	
-	public News insert(int newsNo, int empNo, String newsTitle, String newsContent, Timestamp newsDate){
+	public News insert(String newsTitle, String newsContent){
 		News news = new News();
 		
-		news.setNewsNo(newsNo);
-		news.setEmpNo(empNo);
+//		news.setNewsNo(newsNo);
+//		news.setEmpNo(empNo);
 		news.setNewsTitle(newsTitle);
 		news.setNewsContent(newsContent);
-		news.setNewsDate(newsDate);
+//		news.setNewsDate(newsDate);
 		dao.insert(news);
 		
 		return news;

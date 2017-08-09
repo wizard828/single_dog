@@ -21,7 +21,7 @@
 	<tr bgcolor='#CCCCFF' align='center' valign='middle' height='20'>
 		<td>
 		<h3>所有最新消息 - ListAllNews.jsp</h3>
-		<a href="<%=request.getContextPath()%>/back_end/about_us/news/news_select_page.jsp"><img src="" width="" height="" border="">回首頁</a>
+		<a href="<%=request.getContextPath()%>/back_end/about_us/faq/faq_select_page.jsp"><img src="" width="" height="" border="">回首頁</a>
 		</td>
 	</tr>
 </table>
@@ -47,7 +47,7 @@
 		<th>發佈（更新）日期</th>
 		
 	</tr>
-	
+
 	<%@ include file="pages/page1.file" %> 
 	<c:forEach var="news" items="${list}" begin="<%=pageIndex%>" end="<%=pageIndex+rowsPerPage-1%>">
 		<tr align='center' valign='middle' ${(News.newsNo==param.newsNo) ? 'bgcolor=#CCCCFF':''}><!--將修改的那一筆加入對比色而已-->

@@ -2,7 +2,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ page import="com.news.model.*"%>
 <%
-	News news = (News) request.getAttribute("news"); //EmpServlet.java (Controller), 存入req的empVO物件 (包括幫忙取出的empVO, 也包括輸入資料錯誤時的empVO物件)
+	News news = (News) request.getAttribute("newsUpdate"); //EmpServlet.java (Controller), 存入req的empVO物件 (包括幫忙取出的empVO, 也包括輸入資料錯誤時的empVO物件)
 %>
 <html>
 <head>
@@ -17,7 +17,7 @@
 	<tr bgcolor='#CCCCFF' align='center' valign='middle' height='20'>
 		<td>
 		<h3>最新消息修改 - update_News.jsp</h3>
-		<a href="<%=request.getContextPath()%>/back_end/about_us/news/news_select_page.jsp"><img src="" width="" height="" border="">回首頁</a></td>
+		<a href="<%=request.getContextPath()%>/back_end/about_us/faq/faq_select_page.jsp"><img src="" width="" height="" border="">回首頁</a></td>
 	</tr>
 </table>
 

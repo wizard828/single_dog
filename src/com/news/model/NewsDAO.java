@@ -25,7 +25,7 @@ public class NewsDAO implements NewsDAO_Interface{
 	    }
 	    
 	    private static final String INSERT_STMT = "INSERT INTO News(newsNO, empNo, newsTitle, newsContent, newsDate)"
-	            								+ " VALUES(newsNO_SQ.NEXTVAL,?,?,?,?,?)";
+	            								+ " VALUES(news_SQ.NEXTVAL,?,?,?,SYSDATE)";
 	    private static final String UPDATE_STMT = "UPDATE News SET newsTitle = ?, newsContent = ?, newsDate = SYSDATE WHERE NewsNo = ?";
 	    private static final String DELETE_STMT = "DELETE FROM News WHERE newsNO = ?";
 	    private static final String FIND_BY_PK = "SELECT * FROM News WHERE NewsNO = ?";
@@ -42,11 +42,11 @@ public class NewsDAO implements NewsDAO_Interface{
 	            con = ds.getConnection();
 	            pstmt = con.prepareStatement(INSERT_STMT);
 	            
-	            pstmt.setInt(1, news.getNewsNo());
-//	            pstmt.setInt(2, emp.getempNo());
-	            pstmt.setString(3, news.getNewsTitle());
-	            pstmt.setString(4, news.getNewsContent());
-	            pstmt.setTimestamp(5, news.getNewsDate());
+//	            pstmt.setInt(1, news.getNewsNo());
+	            pstmt.setInt(1, news.getEmpNo());
+	            pstmt.setString(2, news.getNewsTitle());
+	            pstmt.setString(3, news.getNewsContent());
+//	            pstmt.setTimestamp(4, news.getNewsDate());
 	            pstmt.executeUpdate();
 	 
 	        } catch (Exception se) {

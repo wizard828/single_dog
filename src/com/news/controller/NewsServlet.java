@@ -34,7 +34,7 @@ public class NewsServlet extends HttpServlet {
 		String action = req.getParameter("action");
 		
 //		用pk查
-		if ("getOne_For_Display".equals(action)) { // 來自select_page.jsp的請求
+		if ("getOne_For_Display".equals(action)) { // 來自back_end/about_us/back_end/about_us/news/news_select_page.jsp的請求
 
 			List<String> errorMsgs = new LinkedList<String>();
 			// Store this set in the request scope, in case we need to
@@ -50,7 +50,7 @@ public class NewsServlet extends HttpServlet {
 				// Send the use back to the form, if there were errors
 				if (!errorMsgs.isEmpty()) {
 					RequestDispatcher failureView = req
-							.getRequestDispatcher("/select_page.jsp");
+							.getRequestDispatcher("/back_end/about_us/news/news_select_page.jsp");
 					failureView.forward(req, res);
 					return;//程式中斷
 				}
@@ -64,28 +64,28 @@ public class NewsServlet extends HttpServlet {
 				// Send the use back to the form, if there were errors
 				if (!errorMsgs.isEmpty()) {
 					RequestDispatcher failureView = req
-							.getRequestDispatcher("/select_page.jsp");
+							.getRequestDispatcher("/back_end/about_us/news/news_select_page.jsp");
 					failureView.forward(req, res);
 					return;//程式中斷
 				}
 				
 				/***************************2.開始查詢資料*****************************************/
 				NewsService newsService = new NewsService();
-				News news = newsService.findByPrimaryKey(newsNo);
+				News news = newsService.findByPrimaryKey(Integer.valueOf(str));
 				if (newsNo == null) {
 					errorMsgs.add("查無資料");
 				}
 				// Send the use back to the form, if there were errors
 				if (!errorMsgs.isEmpty()) {
 					RequestDispatcher failureView = req
-							.getRequestDispatcher("/select_page.jsp");
+							.getRequestDispatcher("/back_end/about_us/news/news_select_page.jsp");
 					failureView.forward(req, res);
 					return;//程式中斷
 				}
 				
 				/***************************3.查詢完成,準備轉交(Send the Success view)*************/
 				req.setAttribute("news", news); // 資料庫取出的empVO物件,存入req
-				String url = "/back_end/about_us/news/listRealtive.jsp";
+				String url = "/back_end/about_us/news/listNewsNo.jsp";
 				RequestDispatcher successView = req.getRequestDispatcher(url); // 成功轉交listOneEmp.jsp
 				successView.forward(req, res);
 
@@ -93,13 +93,13 @@ public class NewsServlet extends HttpServlet {
 			} catch (Exception e) {
 				errorMsgs.add("無法取得資料:" + e.getMessage());
 				RequestDispatcher failureView = req
-						.getRequestDispatcher("/select_page.jsp");
+						.getRequestDispatcher("/back_end/about_us/news/news_select_page.jsp");
 				failureView.forward(req, res);
 			}
 		}
 
 //		用title查
-		if ("getRealtive_For_Title".equals(action)) { // 來自select_page.jsp的請求
+		if ("getRealtive_For_Title".equals(action)) { // 來自back_end/about_us/news/news_select_page.jsp的請求
 
 			List<String> errorMsgs = new LinkedList<String>();
 			// Store this set in the request scope, in case we need to
@@ -115,7 +115,7 @@ public class NewsServlet extends HttpServlet {
 				// Send the use back to the form, if there were errors
 				if (!errorMsgs.isEmpty()) {
 					RequestDispatcher failureView = req
-							.getRequestDispatcher("/select_page.jsp");
+							.getRequestDispatcher("/back_end/about_us/news/news_select_page.jsp");
 					failureView.forward(req, res);
 					return;//程式中斷
 				}
@@ -123,7 +123,7 @@ public class NewsServlet extends HttpServlet {
 				// Send the use back to the form, if there were errors
 				if (!errorMsgs.isEmpty()) {
 					RequestDispatcher failureView = req
-							.getRequestDispatcher("/select_page.jsp");
+							.getRequestDispatcher("/back_end/about_us/news/news_select_page.jsp");
 					failureView.forward(req, res);
 					return;//程式中斷
 				}
@@ -137,7 +137,7 @@ public class NewsServlet extends HttpServlet {
 				// Send the use back to the form, if there were errors
 				if (!errorMsgs.isEmpty()) {
 					RequestDispatcher failureView = req
-							.getRequestDispatcher("/select_page.jsp");
+							.getRequestDispatcher("/back_end/about_us/news/news_select_page.jsp");
 					failureView.forward(req, res);
 					return;//程式中斷
 				}
@@ -152,13 +152,13 @@ public class NewsServlet extends HttpServlet {
 			} catch (Exception e) {
 				errorMsgs.add("無法取得資料:" + e.getMessage());
 				RequestDispatcher failureView = req
-						.getRequestDispatcher("/select_page.jsp");
+						.getRequestDispatcher("/back_end/about_us/news/news_select_page.jsp");
 				failureView.forward(req, res);
 			}
 		}
 		
 //		用content查
-		if ("getRealtive_For_Content".equals(action)) { // 來自select_page.jsp的請求
+		if ("getRealtive_For_Content".equals(action)) { // 來自back_end/about_us/news/news_select_page.jsp的請求
 
 			List<String> errorMsgs = new LinkedList<String>();
 			// Store this set in the request scope, in case we need to
@@ -174,7 +174,7 @@ public class NewsServlet extends HttpServlet {
 				// Send the use back to the form, if there were errors
 				if (!errorMsgs.isEmpty()) {
 					RequestDispatcher failureView = req
-							.getRequestDispatcher("/select_page.jsp");
+							.getRequestDispatcher("/back_end/about_us/news/news_select_page.jsp");
 					failureView.forward(req, res);
 					return;//程式中斷
 				}
@@ -182,7 +182,7 @@ public class NewsServlet extends HttpServlet {
 				// Send the use back to the form, if there were errors
 				if (!errorMsgs.isEmpty()) {
 					RequestDispatcher failureView = req
-							.getRequestDispatcher("/select_page.jsp");
+							.getRequestDispatcher("/back_end/about_us/news/news_select_page.jsp");
 					failureView.forward(req, res);
 					return;//程式中斷
 				}
@@ -196,7 +196,7 @@ public class NewsServlet extends HttpServlet {
 				// Send the use back to the form, if there were errors
 				if (!errorMsgs.isEmpty()) {
 					RequestDispatcher failureView = req
-							.getRequestDispatcher("/select_page.jsp");
+							.getRequestDispatcher("/back_end/about_us/news/news_select_page.jsp");
 					failureView.forward(req, res);
 					return;//程式中斷
 				}
@@ -211,7 +211,7 @@ public class NewsServlet extends HttpServlet {
 			} catch (Exception e) {
 				errorMsgs.add("無法取得資料:" + e.getMessage());
 				RequestDispatcher failureView = req
-						.getRequestDispatcher("/select_page.jsp");
+						.getRequestDispatcher("/back_end/about_us/news/news_select_page.jsp");
 				failureView.forward(req, res);
 			}
 		}
@@ -276,6 +276,7 @@ public class NewsServlet extends HttpServlet {
 			RequestDispatcher backToList = req.getRequestDispatcher("/back_end/about_us/news/listAllNews.jsp");
 			backToList.forward(req, res);
 		}
+
 //		if ("update".equals(action)) { // 來自update_emp_input.jsp的請求
 //						
 //			List<String> errorMsgs = new LinkedList<String>();
@@ -339,72 +340,71 @@ public class NewsServlet extends HttpServlet {
 //			}
 //		}
 
-//        if ("insert".equals(action)) { // 來自addEmp.jsp的請求  
-//			
-//			List<String> errorMsgs = new LinkedList<String>();
-//			// Store this set in the request scope, in case we need to
-//			// send the ErrorPage view.
-//			req.setAttribute("errorMsgs", errorMsgs);
-//
-//			try {
-//				/***********************1.接收請求參數 - 輸入格式的錯誤處理*************************/
+        if ("insert".equals(action)) { // 來自addEmp.jsp的請求  
+			
+			List<String> errorMsgs = new LinkedList<String>();
+			// Store this set in the request scope, in case we need to
+			// send the ErrorPage view.
+			req.setAttribute("errorMsgs", errorMsgs);
+
+			try {
+				/***********************1.接收請求參數 - 輸入格式的錯誤處理*************************/
 //				Integer newsNo = new Integer(req.getParameter("newsNo").trim());
 //				Integer empNo = new Integer(req.getParameter("empNo").trim());				
-//								
-//				String newsTitle = req.getParameter("newsTitle").trim();
-//				if(newsTitle.isEmpty()){
-//					errorMsgs.add("請填入標題");
-//				}
-//							
-//				String newsContent = req.getParameter("newsContent").trim();								
-//				if(newsTitle.isEmpty()){
-//					errorMsgs.add("請填入內容");
-//				}
-//				
+								
+				String newsTitle = req.getParameter("newsTitle").trim();
+				if(newsTitle.isEmpty()){
+					errorMsgs.add("請填入標題");
+				}
+							
+				String newsContent = req.getParameter("newsContent").trim();								
+				if(newsTitle.isEmpty()){
+					errorMsgs.add("請填入內容");
+				}
+				
 //				Timestamp newsDate = null;
 //				try {
 //					newsDate = Timestamp.valueOf(req.getParameter("newsDate"));
 //				} catch (IllegalArgumentException e) {					
 //					errorMsgs.add("日期格式錯誤");
 //				}
-//				
-//				News news = new News();
+				
+				News news = new News();
 //				news.setNewsNo(newsNo);
-//				news.setEmpno(empno);
-//				news.setNewsTitle(newsTitle);
-//				news.setNewsContent(newsContent);
+//				news.setEmpNo(empNo);
+				news.setNewsTitle(newsTitle);
+				news.setNewsContent(newsContent);
 //				news.setNewsDate(newsDate);
-//
-//				// Send the use back to the form, if there were errors
-//				if (!errorMsgs.isEmpty()) {
-//					req.setAttribute("news", news); // 含有輸入格式錯誤的empVO物件,也存入req
-//					RequestDispatcher failureView = req
-//							.getRequestDispatcher("/emp/update_emp_input.jsp");
-//					failureView.forward(req, res);
-//					return; //程式中斷
-//				}
-//				
-//				/***************************2.開始新增資料***************************************/
-//				NewsService newsService = new NewsService();
-//				news = newsService.update(newsNo, empNo, newsTitle, newsContent, newsDate);
-//				
-//				/***************************3.新增完成,準備轉交(Send the Success view)***********/
-//				
-////				這邊還沒改
-//				String url = "/emp/listAllEmp.jsp";
-//				RequestDispatcher successView = req.getRequestDispatcher(url); // 新增成功後轉交listAllEmp.jsp
-//				successView.forward(req, res);				
-//				
-//				/***************************其他可能的錯誤處理**********************************/
-//			} catch (Exception e) {
-//				errorMsgs.add(e.getMessage());
-//				RequestDispatcher failureView = req
-//						.getRequestDispatcher("/emp/addEmp.jsp");
-//				failureView.forward(req, res);
-//			}
-//		}
-//		
-//     
+
+				// Send the use back to the form, if there were errors
+				if (!errorMsgs.isEmpty()) {
+					req.setAttribute("news", news); // 含有輸入格式錯誤的empVO物件,也存入req
+					RequestDispatcher failureView = req
+							.getRequestDispatcher("/back_end/about_us/news/addNews.jsp");
+					failureView.forward(req, res);
+					return; //程式中斷
+				}
+				
+				/***************************2.開始新增資料***************************************/
+				NewsService newsService = new NewsService();
+				news = newsService.insert(newsTitle, newsContent);
+				
+				/***************************3.新增完成,準備轉交(Send the Success view)***********/
+				
+				String url = "/back_end/about_us/news/listAllNews.jsp";
+				RequestDispatcher successView = req.getRequestDispatcher(url); // 新增成功後轉交listAllEmp.jsp
+				successView.forward(req, res);				
+				
+				/***************************其他可能的錯誤處理**********************************/
+			} catch (Exception e) {
+				errorMsgs.add(e.getMessage());
+				RequestDispatcher failureView = req
+						.getRequestDispatcher("/back_end/about_us/news/addNews.jsp");
+				failureView.forward(req, res);
+			}
+		}
+		
+     
 		if ("delete".equals(action)) { // 來自listAllEmp.jsp 或  /dept/listEmps_ByDeptno.jsp的請求
 
 			List<String> errorMsgs = new LinkedList<String>();

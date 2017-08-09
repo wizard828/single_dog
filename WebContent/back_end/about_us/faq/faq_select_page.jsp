@@ -10,11 +10,11 @@
 
 <table border='1' cellpadding='5' cellspacing='0' width='400'>
   <tr bgcolor='#CCCCFF' align='center' valign='middle' height='20'>
-    <td><h3>News Backend</h3><font color=red>( MVC )</font></td>
+    <td><h3>Faq Backend</h3><font color=red>( MVC )</font></td>
   </tr>
 </table>
 
-<p>This is the Home page for News Backend</p>
+<p>This is the Home page for Faq Backend</p>
 
 <h3>資料查詢:</h3>
 <%-- 錯誤表列 --%>
@@ -29,17 +29,17 @@
 </c:if>
 
 <ul>
-  <li><a href='<%=request.getContextPath()%>/back_end/about_us/news/listAllNews.jsp'>List</a> all News. </li>
-  <li><a href='<%=request.getContextPath()%>/back_end/about_us/news/addNews.jsp'>Add</a> something New.</li>
+  <li><a href='<%=request.getContextPath()%>/back_end/about_us/faq/listAllFaq.jsp'>List</a> all FAQ. </li>
+  <li><a href='<%=request.getContextPath()%>/back_end/about_us/faq/addFaq.jsp'>Add</a> something FAQ.</li>
   
   <br>
   
   <li>
-    <FORM METHOD="post" ACTION="<%= request.getContextPath() %>/back_end/news/news.do" >
+    <FORM METHOD="post" ACTION="<%= request.getContextPath() %>/back_end/faq/faq.do" >
         <b>輸入最新消息編號 (如0001):</b>
         <input type="text" name="newsNo">
         <input type="submit" value="查詢">
-        <input type="hidden" name="action" value="getOne_For_Display">
+        <input type="hidden" name="action" value="getFaqNo_For_Display">
     </FORM>
   </li>
 
@@ -47,7 +47,7 @@
    
   <li>
 
-     <FORM METHOD="post" ACTION="<%=request.getContextPath()%>/back_end/news/news.do" >
+     <FORM METHOD="post" ACTION="<%=request.getContextPath()%>/back_end/faq/faq.do" >
        <b>選擇員工編號:</b>
        <select size="1" name="empNo">
          <c:forEach var="emp" items="${empSvc.all}" > 
@@ -60,7 +60,7 @@
   </li>
 
 <li>
-     <FORM METHOD="post" ACTION="<%=request.getContextPath()%>/back_end/news/news.do" >
+     <FORM METHOD="post" ACTION="<%=request.getContextPath()%>/back_end/faq/faq.do" >
        <b>選擇員工姓名:</b>
        <select size="1" name="empName">
          <c:forEach var="empname" items="${empSvc.all}" > 
@@ -73,16 +73,25 @@
   </li>
   
   <li>
-     <FORM METHOD="post" ACTION="<%=request.getContextPath()%>/back_end/news/news.do" >
+     <FORM METHOD="post" ACTION="<%=request.getContextPath()%>/back_end/faq/faq.do" >
+       <b>輸入最新消息類別:</b>
+       <input type="text" name="faqTitle">
+       <input type="submit" value="查詢">
+       <input type="hidden" name="action" value="getRealtive_For_Category">
+     </FORM>
+  </li>
+  
+  <li>
+     <FORM METHOD="post" ACTION="<%=request.getContextPath()%>/back_end/faq/faq.do" >
        <b>輸入最新消息標題:</b>
-       <input type="text" name="newsTitle">
+       <input type="text" name="faqTitle">
        <input type="submit" value="查詢">
        <input type="hidden" name="action" value="getRealtive_For_Title">
      </FORM>
   </li>
   
     <li>
-     <FORM METHOD="post" ACTION="<%=request.getContextPath()%>/back_end/news/news.do" >
+     <FORM METHOD="post" ACTION="<%=request.getContextPath()%>/back_end/faq/faq.do" >
        <b>輸入最新消息內容:</b>
        <input type="text" name="newsContent">
        <input type="submit" value="查詢">

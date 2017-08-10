@@ -2,8 +2,7 @@ package com.faq.model;
 
 import java.util.List;
 
-import com.ad.model.Ad;
-import com.news.model.News;
+import com.faq.model.Faq;
 
 public class FaqService {
 	
@@ -17,7 +16,7 @@ public class FaqService {
 		Faq faq = new Faq();
 		
 //		faq.setFaqNo(faqNo);
-		faq.setEmpNo(empNo);
+//		faq.setEmpNo(empNo);
 		faq.setFaqCategory(faqCategory);
 		faq.setFaqTitle(faqTitle);
 		faq.setFaqAnswer(faqAnswer);

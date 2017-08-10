@@ -36,7 +36,7 @@
   
   <li>
     <FORM METHOD="post" ACTION="<%= request.getContextPath() %>/back_end/faq/faq.do" >
-        <b>輸入最新消息編號 (如0001):</b>
+        <b>輸入常見問題編號 (如0001):</b>
         <input type="text" name="newsNo">
         <input type="submit" value="查詢">
         <input type="hidden" name="action" value="getFaqNo_For_Display">
@@ -48,7 +48,7 @@
   <li>
 
      <FORM METHOD="post" ACTION="<%=request.getContextPath()%>/back_end/faq/faq.do" >
-       <b>選擇員工編號:</b>
+       <b>選擇常見問題編號:</b>
        <select size="1" name="empNo">
          <c:forEach var="emp" items="${empSvc.all}" > 
           <option value="${emp.empno}">${emp.empno}
@@ -74,8 +74,8 @@
   
   <li>
      <FORM METHOD="post" ACTION="<%=request.getContextPath()%>/back_end/faq/faq.do" >
-       <b>輸入最新消息類別:</b>
-       <input type="text" name="faqTitle">
+       <b>輸入常見問題類別:</b>
+       <input type="text" name="faqCategory">
        <input type="submit" value="查詢">
        <input type="hidden" name="action" value="getRealtive_For_Category">
      </FORM>
@@ -83,7 +83,7 @@
   
   <li>
      <FORM METHOD="post" ACTION="<%=request.getContextPath()%>/back_end/faq/faq.do" >
-       <b>輸入最新消息標題:</b>
+       <b>輸入常見問題標題:</b>
        <input type="text" name="faqTitle">
        <input type="submit" value="查詢">
        <input type="hidden" name="action" value="getRealtive_For_Title">
@@ -92,10 +92,10 @@
   
     <li>
      <FORM METHOD="post" ACTION="<%=request.getContextPath()%>/back_end/faq/faq.do" >
-       <b>輸入最新消息內容:</b>
-       <input type="text" name="newsContent">
+       <b>輸入常見問題答案:</b>
+       <input type="text" name="faqAnswer">
        <input type="submit" value="查詢">
-       <input type="hidden" name="action" value="getRealtive_For_Content">
+       <input type="hidden" name="action" value="getRealtive_For_Answer">
      </FORM>
   </li>
   

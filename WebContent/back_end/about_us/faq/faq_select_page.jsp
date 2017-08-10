@@ -1,6 +1,6 @@
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="Big5"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ page import="com.news.model.*"%>
+<%@ page import="com.faq.model.*"%>
 
 <html>
 <head>
@@ -37,25 +37,25 @@
   <li>
     <FORM METHOD="post" ACTION="<%= request.getContextPath() %>/back_end/faq/faq.do" >
         <b>輸入常見問題編號 (如0001):</b>
-        <input type="text" name="newsNo">
+        <input type="text" name="faqNo">
         <input type="submit" value="查詢">
         <input type="hidden" name="action" value="getFaqNo_For_Display">
     </FORM>
   </li>
 
-<%--   <jsp:useBean id="EmpService" scope="page" class="com.Emp.model.EmpService" /> --%>
+<%--   <jsp:useBean id="FaqService" scope="page" class="com.Faq.model.FaqService" /> --%>
    
   <li>
 
      <FORM METHOD="post" ACTION="<%=request.getContextPath()%>/back_end/faq/faq.do" >
        <b>選擇常見問題編號:</b>
-       <select size="1" name="empNo">
-         <c:forEach var="emp" items="${empSvc.all}" > 
-          <option value="${emp.empno}">${emp.empno}
+       <select size="1" name="faqNo">
+         <c:forEach var="faq" items="${faqService.all}" > 
+          <option value="${faq.faqno}">${faq.faqno}
          </c:forEach>   
        </select>
        <input type="submit" value="送出">
-       <input type="hidden" name="action" value="getEmpNo_For_Display">
+       <input type="hidden" name="action" value="getOne_For_Display">
     </FORM>
   </li>
 

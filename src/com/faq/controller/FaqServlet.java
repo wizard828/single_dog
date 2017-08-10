@@ -28,7 +28,7 @@ public class FaqServlet extends HttpServlet {
 		String action = req.getParameter("action");
 		
 //		用pk查
-		if ("getOne_For_Display".equals(action)) { // 來自back_end/about_us/back_end/about_us/faq/faq_select_page.jsp的請求
+		if ("getFaqNo_For_Display".equals(action)) { // 來自back_end/about_us/back_end/about_us/faq/faq_select_page.jsp的請求
 
 			List<String> errorMsgs = new LinkedList<String>();
 			// Store this set in the request scope, in case we need to
@@ -38,6 +38,7 @@ public class FaqServlet extends HttpServlet {
 			try {
 				/***************************1.接收請求參數 - 輸入格式的錯誤處理**********************/
 				String str = req.getParameter("faqNo");
+				System.out.println(str);
 				if (str == null || (str.trim()).length() == 0) {
 					errorMsgs.add("請輸入編號");
 				}
@@ -65,7 +66,7 @@ public class FaqServlet extends HttpServlet {
 				
 				/***************************2.開始查詢資料*****************************************/
 				FaqService faqService = new FaqService();
-				Faq faq = faqService.findByPrimaryKey(Integer.valueOf(str));
+				Faq faq = faqService.findByPrimaryKey(Integer.valueOf(faqNo));
 				if (faqNo == null) {
 					errorMsgs.add("查無資料");
 				}
@@ -79,7 +80,7 @@ public class FaqServlet extends HttpServlet {
 				
 				/***************************3.查詢完成,準備轉交(Send the Success view)*************/
 				req.setAttribute("faq", faq); // 資料庫取出的empVO物件,存入req
-				String url = "/back_end/about_us/news/listNewsNo.jsp";
+				String url = "/back_end/about_us/faq/listFaqNo.jsp";
 				RequestDispatcher successView = req.getRequestDispatcher(url); // 成功轉交listOneEmp.jsp
 				successView.forward(req, res);
 

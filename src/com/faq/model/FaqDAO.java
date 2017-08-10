@@ -368,10 +368,11 @@ public class FaqDAO implements FaqDAO_Interface{
 	            while(rs.next()){
 	            	Faq faq=new Faq();
 	                faq.setFaqNo(rs.getInt("faqNo"));
+	                faq.setEmpNo(rs.getInt("empNo"));
 	                faq.setFaqCategory(rs.getString("faqCategory"));
 	                faq.setFaqTitle(rs.getString("faqTitle"));
 	                faq.setFaqAnswer(rs.getString("faqAnswer"));
-	                      
+	                faqList.add(faq);
 	            }
 	             
 	        } catch (SQLException e) {

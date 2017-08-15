@@ -6,9 +6,9 @@
 <meta charset="utf-8"></meta>
 <meta content="IE=edge" http-equiv="X-UA-Compatible"></meta>
 <meta content="width=device-width, initial-scale=1.0, shrink-to-fit=no" name="viewport"></meta>
-<title>
-Backend-Index
-</title>
+
+<title>Backend-Index</title>
+
 <link href="<%= request.getContextPath() %>/back_end/css/bootstrap.css" rel="stylesheet"></link>
 <link href="<%= request.getContextPath() %>/back_end/css/nav.css" rel="stylesheet"></link>
 <link href="<%= request.getContextPath() %>/back_end/css/colorplan.css" rel="stylesheet"></link>
@@ -17,6 +17,7 @@ Backend-Index
 <!-- Custom Fonts -->
 <link href="<%= request.getContextPath() %>/back_end/font-awesome/css/font-awesome.css" rel="stylesheet" type="text/css"></link>
 <link href="<%= request.getContextPath() %>/back_end/css/backend.css" rel="stylesheet"></link>
+
 <!--[if lt IE 9]>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
@@ -175,7 +176,7 @@ Backend-Index
                                 <button class="btn btn-success btn-md" type="news-button">
                                     Post Something New?
                                 </button>
-                                <a data-toggle="news-list" href="../front_end/news_user_modify.html" title="Got New Stuff?">
+                                <a data-toggle="news-list" href="<%= request.getContextPath() %>/back_end/about_us/news/news_select_page.jsp" title="Got New Stuff?">
                                     <img alt="" src="<%= request.getContextPath() %>/back_end/about_us/images/news.png" style="margin-left: auto; width:100%; height:100%; border:10;">
                                     </img>
                                 </a>
@@ -186,7 +187,7 @@ Backend-Index
                                 <button class="btn btn-success btn-md" type="faq-button">
                                     Got New FAQ for User?
                                 </button>
-                                <a data-toggle="faq-list" href="#" title="Get New FAQ?">
+                                <a data-toggle="faq-list" href="<%= request.getContextPath() %>/back_end/about_us/faq/faq_select_page.jsp"" title="Get New FAQ?">
                                     <img alt="" src="<%= request.getContextPath() %>/back_end/about_us/images/faq.png" style="margin-left: auto; width:100%; height:100%; border:10;">
                                     </img>
                                 </a>

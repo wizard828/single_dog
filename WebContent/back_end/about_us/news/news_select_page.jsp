@@ -31,7 +31,7 @@
 <ul>
   <li><a href='<%=request.getContextPath()%>/back_end/about_us/news/listAllNews.jsp'>List</a> all News. </li>
   <li><a href='<%=request.getContextPath()%>/back_end/about_us/news/addNews.jsp'>Add</a> something News.</li>
-  
+  <li><a href='<%=request.getContextPath()%>/back_end/about_us/news/addNews.jsp'>¦^¿ï¾Ü­¶</li>
   <br>
   
   <li>

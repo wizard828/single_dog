@@ -31,7 +31,7 @@
 <ul>
   <li><a href='<%=request.getContextPath()%>/back_end/about_us/faq/listAllFaq.jsp'>List</a> all FAQ. </li>
   <li><a href='<%=request.getContextPath()%>/back_end/about_us/faq/addFaq.jsp'>Add</a> something FAQ.</li>
-  
+  <li><a href='<%=request.getContextPath()%>/back_end/about_us/about_us_back_end_index.jsp'>¦^¿ï¾Ü­¶</a></li>
   <br>
   
   <li>

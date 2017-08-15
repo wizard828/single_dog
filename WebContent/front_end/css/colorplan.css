@@ -27,13 +27,6 @@ div>h2{
     !important}*/
 
 
-body{
-  font-family: 'Microsoft JhengHei', sans-serif;
-    color:black;
-    background:#fcebd4;
-    
-  margin:0px;
-}
 
 
     .auto-center{
@@ -76,7 +69,7 @@ width:100%;
 
 .postion-left-group{
   position:relative;
-  margin-top: 2em;
+  margin-top: 28rem;
   display:block;
 }
 

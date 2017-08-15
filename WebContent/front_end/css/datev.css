@@ -7,46 +7,15 @@
 	left:15%;
 }*/
 
-
-
-div>span{
-	margin-top:2rem;
+div{
+	overflow:hidden;
 }
-
-
-div .glyphicon-search{
-	margin-left:3rem;
-	margin-right:2rem;
-}
-
-.amos li + li:before{
-	content:'|';
-	padding-right: 1em;	
-}
-
-.main-page-show{
-	margin-top:5rem;
-}
-
-#allitemsimg{
-	max-width:150px;
-/* 	max-width:50%; */
-	postion:relative;
-}
-
-.logo-img{
-	postion:relative;
-	max-width:50%;
-	margin-bottom:10rem;
-}
-
-
 
 .block {
-	display: block;
-	position: relative;
-	width: 295px;
-	border-radius: 5px;
+//	display: block;
+	//position: relative;
+	//width: 295px;
+	//border-radius: 5px;
 	background: #fff;
 	box-shadow: 0 1px 2px rgba(0, 0, 0, .2);
 }
@@ -57,10 +26,14 @@ div .glyphicon-search{
 }
 
 .date img {
+	height:365px;
 	border-top-left-radius: 5px;
 	border-top-right-radius: 5px;
 }
 
+#pet{
+	width:100%;
+}
 
 .info {
 	display: block;

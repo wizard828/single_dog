@@ -29,9 +29,10 @@
 </c:if>
 
 <ul>
-  <li><a href='<%=request.getContextPath()%>/back_end/about_us/news/listAllNews.jsp'>List</a> all News. </li>
-  <li><a href='<%=request.getContextPath()%>/back_end/about_us/news/addNews.jsp'>Add</a> something News.</li>
-  <li><a href='<%=request.getContextPath()%>/back_end/about_us/news/addNews.jsp'>回選擇頁</li>
+  <li><a href="<%=request.getContextPath()%>/back_end/about_us/news/listAllNews.jsp">List</a> all News. </li>
+  <li><a href="<%=request.getContextPath()%>/back_end/about_us/news/addNews.jsp">Add</a> something News.</li>
+  <li><a href="<%=request.getContextPath()%>/back_end/about_us/about_us_back_end_index.jsp">回選擇頁</a></li>
+  
   <br>
   
   <li>
@@ -91,10 +92,8 @@
   </li>
   
 <%--   
-	<%
- 	News news = (News) request.getAttribute("news"); //EmpServlet.java (Concroller), 存入req的empVO物件 (包括幫忙取出的empVO, 也包括輸入資料錯誤時的empVO物件)
-	%>
- 
+	<% News news = (News) request.getAttribute("news"); //EmpServlet.java (Concroller), 存入req的empVO物件 (包括幫忙取出的empVO, 也包括輸入資料錯誤時的empVO物件)
+	%> 
   <li>
  		<FORM>
  		<b>發佈日期:</b>
@@ -148,9 +147,9 @@
         <input type="submit" value="送出">
         <input type="hidden" name="action" value="listEmps_ByCompositeQuery">
      </FORM>
-  </li>
-</ul>
---%>
+  </li> 
+</ul> --%>
+
 </body>
 
 </html>

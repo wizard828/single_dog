@@ -73,7 +73,7 @@ public class NewsServlet extends HttpServlet {
 				NewsService newsService = new NewsService();
 				News news = newsService.findByPrimaryKey(Integer.valueOf(str));
 				if (newsNo == null) {
-					errorMsgs.add("查無資料");
+					errorMsgs.add("不要亂打編號");
 				}
 				// Send the use back to the form, if there were errors
 				if (!errorMsgs.isEmpty()) {
@@ -132,7 +132,7 @@ public class NewsServlet extends HttpServlet {
 				NewsService newsService = new NewsService();
 				List<News> newsList = newsService.findByTitle(newsTitle);
 				if (newsList.isEmpty()) {
-					errorMsgs.add("查無資料");
+					errorMsgs.add("沒有這個標題欸");
 				}
 				// Send the use back to the form, if there were errors
 				if (!errorMsgs.isEmpty()) {
@@ -191,7 +191,7 @@ public class NewsServlet extends HttpServlet {
 				NewsService newsService = new NewsService();
 				List<News> newsList = newsService.findByContent(newsContent);
 				if (newsList.isEmpty()) {
-					errorMsgs.add("查無資料");
+					errorMsgs.add("沒有相關的內容喔");
 				}
 				// Send the use back to the form, if there were errors
 				if (!errorMsgs.isEmpty()) {

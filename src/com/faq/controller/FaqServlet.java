@@ -127,7 +127,7 @@ public class FaqServlet extends HttpServlet {
 				FaqService faqService = new FaqService();
 				List<Faq> faqList = faqService.findByCategory(faqCategory);
 				if (faqList.isEmpty()) {
-					errorMsgs.add("查無資料");
+					errorMsgs.add("找不到這個類別喔");
 				}
 				// Send the use back to the form, if there were errors
 				if (!errorMsgs.isEmpty()) {
@@ -186,7 +186,7 @@ public class FaqServlet extends HttpServlet {
 				FaqService faqService = new FaqService();
 				List<Faq> faqList = faqService.findByTitle(faqTitle);
 				if (faqList.isEmpty()) {
-					errorMsgs.add("查無資料");
+					errorMsgs.add("沒有這個標題喔");
 				}
 				// Send the use back to the form, if there were errors
 				if (!errorMsgs.isEmpty()) {
@@ -245,7 +245,7 @@ public class FaqServlet extends HttpServlet {
 				FaqService faqService = new FaqService();
 				List<Faq> faqList = faqService.findByAnswer(faqAnswer);
 				if (faqList.isEmpty()) {
-					errorMsgs.add("查無資料");
+					errorMsgs.add("找不到這個答案欸");
 				}
 				// Send the use back to the form, if there were errors
 				if (!errorMsgs.isEmpty()) {

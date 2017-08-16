@@ -1,5 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="BIG5"%>
+﻿<%@ page language="java" contentType="text/html; charset=BIG5" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="">
 
@@ -48,7 +47,7 @@
                         </span>
                 </button>
                 <a class="navbar-brand logo" href="index.html">
-                       �d��You&Me
+                       寵物You&Me
                     </a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -56,22 +55,22 @@
                 <ul class="nav navbar-nav">
                     <li>
                         <a href="date.html">
-                                ���|�ӫ~
+                                約會商品
                             </a>
                     </li>
                     <li>
                         <a href="product.html">
-                                �ӫ�
+                                商城
                             </a>
                     </li>
                     <li>
                         <a href="activity.html">
-                                ����
+                                活動
                             </a>
                     </li>
                     <li>
                         <a href="diary.html">
-                                �d����x
+                                寵物日誌
                             </a>
                     </li>
                 </ul>
@@ -79,22 +78,22 @@
                     <ul class="nav navbar-nav">
                         <li>
                             <a href="about.html">
-                                    �ʪ���
+                                    購物車
                                 </a>
                         </li>
                         <li>
                             <a href="about.html">
-                                    �����H
+                                    站內信
                                 </a>
                         </li>
                         <li>
                             <a href="services.html">
-                                    �|���M��
+                                    會員專區
                                 </a>
                         </li>
                         <li>
                             <a href="contact.html">
-                                    �n�X
+                                    登出
                                 </a>
                         </li>
                     </ul>
@@ -104,132 +103,132 @@
         </div>
         <!-- /.container -->
     </nav>
-    <!-- ������b�o -->
+    <!-- 側邊欄在這 -->
     <div class="container-fluid">
         <div class="row">
             <div class="col-xs-12 col-sm-2 postion-left-group">
                 <div id="menu" data-spy="affix" data-offset-top="100">
                     <div class="panel list-group list-color" >
                         <a class="list-group-item" data-parent="#menu" data-target="#sm1" data-toggle="collapse" href="#">
-                                ���i���O1
+                                公告類別1
                                 <span class="glyphicon glyphicon-triangle-bottom pull-right">
                                 </span>
                             </a>
                         <div class="sublinks collapse" id="sm1">
                             <a class="list-group-item small " href="# ">
-                                    �̷s����1
+                                    最新消息1
                                 </a>
                             <a class="list-group-item small " href="# ">
-                                    �̷s����2
+                                    最新消息2
                                 </a>
                             <a class="list-group-item small " href="# ">
-                                    �̷s����3
+                                    最新消息3
                                 </a>
                             <a class="list-group-item small " href="# ">
-                                    �̷s����4
+                                    最新消息4
                                 </a>
                             <a class="list-group-item small " href="# ">
-                                    �̷s����5
+                                    最新消息5
                                 </a>
                         </div>
                         <a class="list-group-item" data-parent="#menu" data-target="#sm2" data-toggle="collapse" href="#">
-                                ���i���O2
+                                公告類別2
                                 <span class="glyphicon glyphicon-triangle-bottom pull-right">
                                 </span>
                             </a>
                         <div class="sublinks collapse" id="sm2">
                             <a class="list-group-item small " href="# ">
-                                    �̷s����1
+                                    最新消息1
                                 </a>
                             <a class="list-group-item small " href="# ">
-                                    �̷s����2
+                                    最新消息2
                                 </a>
                             <a class="list-group-item small " href="# ">
-                                    �̷s����3
+                                    最新消息3
                                 </a>
                             <a class="list-group-item small " href="# ">
-                                    �̷s����4
+                                    最新消息4
                                 </a>
                             <a class="list-group-item small " href="# ">
-                                    �̷s����5
+                                    最新消息5
                                 </a>
                         </div>
                         <a class="list-group-item" data-parent="#menu" data-target="#sm3" data-toggle="collapse" href="#">
-                                ���i���O3
+                                公告類別3
                                 <span class="glyphicon glyphicon-triangle-bottom pull-right">
                                 </span>
                             </a>
                         <div class="sublinks collapse" id="sm3">
                             <a class="list-group-item small " href="# ">
-                                    �̷s����1
+                                    最新消息1
                                 </a>
                             <a class="list-group-item small " href="# ">
-                                    �̷s����2
+                                    最新消息2
                                 </a>
                             <a class="list-group-item small " href="# ">
-                                    �̷s����3
+                                    最新消息3
                                 </a>
                             <a class="list-group-item small " href="# ">
-                                    �̷s����4
+                                    最新消息4
                                 </a>
                             <a class="list-group-item small " href="# ">
-                                    �̷s����5
+                                    最新消息5
                                 </a>
                         </div>
                         <a class="list-group-item" data-parent="#menu" data-target="#sm4" data-toggle="collapse" href="#">
-                                ���i���O4
+                                公告類別4
                                 <span class="glyphicon glyphicon-triangle-bottom pull-right">
                                 </span>
                             </a>
                         <div class="sublinks collapse" id="sm4">
                             <a class="list-group-item small " href="# ">
-                                    �̷s����1
+                                    最新消息1
                                 </a>
                             <a class="list-group-item small " href="# ">
-                                    �̷s����2
+                                    最新消息2
                                 </a>
                             <a class="list-group-item small " href="# ">
-                                    �̷s����3
+                                    最新消息3
                                 </a>
                             <a class="list-group-item small " href="# ">
-                                    �̷s����4
+                                    最新消息4
                                 </a>
                             <a class="list-group-item small " href="# ">
-                                    �̷s����5
+                                    最新消息5
                                 </a>
                         </div>
                         <a class="list-group-item" data-parent="#menu" data-target="#sm5" data-toggle="collapse" href="#">
-                                ���i���O5
+                                公告類別5
                                 <span class="glyphicon glyphicon-triangle-bottom pull-right">
                                 </span>
                             </a>
                         <div class="sublinks collapse" id="sm5">
                             <a class="list-group-item small " href="# ">
-                                    �̷s����1
+                                    最新消息1
                                 </a>
                             <a class="list-group-item small " href="# ">
-                                    �̷s����2
+                                    最新消息2
                                 </a>
                             <a class="list-group-item small " href="# ">
-                                    �̷s����3
+                                    最新消息3
                                 </a>
                             <a class="list-group-item small " href="# ">
-                                    �̷s����4
+                                    最新消息4
                                 </a>
                             <a class="list-group-item small " href="# ">
-                                    �̷s����5
+                                    最新消息5
                                 </a>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- �ۿO���o�o -->
+            <!-- 幻燈片這這 -->
             <div class="col-xs-12 col-sm-8 ">
                 <div>
                     <div class="row">
                         <div class="col-sm-10 col-sm-offset-1">
                             <div class="carousel slide" data-ride="carousel" id="carousel-id">
-                                <!-- �ۿO���p���I�� -->
+                                <!-- 幻燈片小圓點區 -->
                                 <ol class="carousel-indicators">
                                     <li class="" data-slide-to="0" data-target="#carousel-id">
                                     </li>
@@ -242,17 +241,17 @@
                                     <li class="active" data-slide-to="4" data-target="#carousel-id">
                                     </li>
                                 </ol>
-                                <!-- �ۿO���D�ϰ� -->
+                                <!-- 幻燈片主圖區 -->
                                 <div class="carousel-inner">
                                     <div class="item">
                                         <img alt="" src="images/wpnature.com-beach-blue-ocean-sea-wallpaper-pc-2880x960.jpg">
                                         <div class="container">
                                             <div class="carousel-caption">
                                                 <h1>
-                                                            ���D
+                                                            標題
                                                         </h1>
                                                 <p>
-                                                    ����
+                                                    內文
                                                 </p>
                                                 <p>
                                                     <a class="btn btn-lg btn-primary" href="#" role="button">
@@ -268,14 +267,14 @@
                                         <div class="container">
                                             <div class="carousel-caption">
                                                 <h1>
-                                                            ���D
+                                                            標題
                                                         </h1>
                                                 <p>
-                                                    ����H
+                                                    內文？
                                                 </p>
                                                 <p>
                                                     <a class="btn btn-lg btn-primary" href="#" role="button">
-                                                                ��h
+                                                                更多
                                                             </a>
                                                 </p>
                                             </div>
@@ -287,14 +286,14 @@
                                         <div class="container">
                                             <div class="carousel-caption">
                                                 <h1>
-                                                            ���D
+                                                            標題
                                                         </h1>
                                                 <p>
-                                                    ����
+                                                    內文
                                                 </p>
                                                 <p>
                                                     <a class="btn btn-lg btn-primary" href="#" role="button">
-                                                                �ԲӤ��e
+                                                                詳細內容
                                                             </a>
                                                 </p>
                                             </div>
@@ -302,7 +301,7 @@
                                         </img>
                                     </div>
                                 </div>
-                                <!-- �W�U������� -->
+                                <!-- 上下頁控制區 -->
                                 <a class="left carousel-control" data-slide="prev" href="#carousel-id">
                                         <span class="glyphicon glyphicon-chevron-left">
                                         </span>
@@ -314,66 +313,66 @@
                             </div>
                         </div>
                     </div>
-                     <!-- �j�M���� -->
+                     <!-- 搜尋表單 -->
                     <div>
                         <form class="navbar-form navbar-right" role="search">
                             <div class="form-group">
-                                <input class="form-control" placeholder="�п�J����r" type="text">
+                                <input class="form-control" placeholder="請輸入關鍵字" type="text">
                                 </input>
                             </div>
                             <button class="btn btn-default" type="submit">
-                                �j�M
+                                搜尋
                             </button>
                         </form>
                     </div>
-                    <!-- �ѥ]�h�b�o -->
+                    <!-- 麵包屑在這 -->
                     <div class="breadcrumb-container">
                         <div class="breadcrumb-row">
                             <ol class="breadcrumb">
                                 <li>
                                     <a href="#">
-                                            ����
+                                            首頁
                                         </a>
                                 </li>
                                 <li>
                                     <a href="#">
-                                            �̷s����
+                                            最新消息
                                         </a>
                                 </li>
                                 <li class="active">
-                                    �o�O�N�O���i��
+                                    這是就是公告區
                                 </li>
                             </ol>
                         </div>
                     </div>
 
-                    <!-- faq�P�|��� -->
+                    <!-- faq摺疊選單 -->
                     <div class="panel-group" id="accordion">
                         <div class="panel panel-default">
                             <div class="panel-heading">
                                 <h3 class="panel-title">
                                         <a data-parent="#accordion" data-toggle="collapse" href="#collapseOne">
-                                            �̷s�����b�o��  �� 1 ����--hide ��k
+                                            最新消息在這邊  第 1 部分--hide 方法
                                         </a>
                                     </h3>
                             </div>
                             <div class="panel-collapse collapse in" id="collapseOne">
                                 <div class="panel-body">
-                                    <!-- faq���I�b�o -->
+                                    <!-- faq重點在這 -->
                                     <div class="question">
                                         <blockquote>
                                             <p>
                                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae sint incidunt eum doloribus consequatur repellendus animi officiis mollitia laudantium, quas dicta autem magni! Nemo magnam, illo voluptate distinctio quaerat eius.
                                             </p>
                                             <cite class="">
-                                                �樭�����߱z
+                                                單身狗關心您
                                             </cite>
                                         </blockquote>
                                     </div>
                                     <div class="answer">
                                         <h4>
-                                                �o�O���i
-                                            </h4> �w��²��ק�F�`�z���᭱���u�קﻴ���Ω��¦�F�A�ҰʤO�ץH�W�O�@�إD�u�p�l�k�ͭ��W�n���A��o�ܦ��k�߳d���ɥR����y�A�W�D�D���R�������y���_����T�ܽж�g�H���A�S�����򭲩R��]�R��ؤl�N�n����ͱ��T�~�g�A�W�������d�򤺳̦h�@�ɷf�t�ӹq�����ۡC��Ȱ|�����A�Q�w��L�A�벼������餣�h�гy��g���ưO�̪����Τ������h�X�餺�ѡA���B�f�H�t��άO�p�ɼƦr��_�N���l����ܹε����A�d�򤺦Y�����A���q��ǡA�۪o�C���u����I�o�̤U�����A�s�޳N�S�Q��]�t������]�w��A�����٨S���]�k�S�H���N�����A�i��������Ȱ|���~�H�ƦìV�ӤH�ؿ��A�Ȱʺ����G����@���ŧG�A�Y�v�n?���o�Q�ѷN�~�ݥX�����۰ʤ��G�~�[�֨����w��A���߰s���L�����x�`�`�����j�O�S�Q����L�]�A�s�{���նi�@�B�i����Ʀ�m�ڴN�d�����`�w���A�A��M��L���i�D�A�g�A�F���E�P����ƬG�d�l����U���k�B�ͤp�A�����b�o�Ө��L�ڷQ�D�O���i�W�ߦA���A�ɯ�a�q�b�o�ӴX�~�쥻�A���h�q���Ϲ�ڬݳ̫������H�W���ڵo�����ɤu�����g�ӡA
+                                                這是公告
+                                            </h4> 針對簡體修改厲害理念後面員工修改輕易用於基礎政，勞動力度以上是一種主席小子男生音頻登錄，獲得很有法律責任補充科研臉，頻道道路充滿供應球隊寶貝資訊邀請填寫人類，沒有什麼革命原因買賣種子就要附近友情三年經，上面版面範圍內最多共享搭配來電部隊自。國務院成長你想針對他，投票消息近日不去創造填寫材料記者直接用戶瞬間退出體內忘，之處病人配件或是聯賽數字恢復意見吸引顯示團結哪，範圍內吃飯給你階段科學，石油低價真實性點這裡下載哪，新技術沒想到包含本文對手設定文，中文還沒有魔法沒人有意本站，可見版面國務院海外人數污染個人目錄服務動漫成果領先一份宣佈，頭髮盯着取得昨天意外看出攻擊自動公佈外觀快車喜歡投，成立酒店無門平台深深內部大力沒想到但他設，編程明白進一步可見具備色彩我就留言關注安徽，你能專欄他說告訴你寫，政策激烈限制事故妻子不能下載女朋友小，公里在這個見過我想主板培養獨立再次，導航家電在這個幾年原本，失去電源反對我看最後位於手續以上但我發表此時工藝曾經商，
                                     </div>
                                 </div>
                             </div>
@@ -382,7 +381,7 @@
                             <div class="panel-heading">
                                 <h4 class="panel-title">
                                         <a data-parent="#accordion" data-toggle="collapse" href="#collapseTwo">
-                                            �̷s�����b�o��C�� 2 ����--show ��k
+                                            最新消息在這邊。第 2 部分--show 方法
                                         </a>
                                     </h4>
                             </div>
@@ -396,7 +395,7 @@
                             <div class="panel-heading">
                                 <h4 class="panel-title">
                                         <a data-parent="#accordion" data-toggle="collapse" href="#collapseThree">
-                                            �̷s�����b�o��C�� 3 ����--toggle ��k
+                                            最新消息在這邊。第 3 部分--toggle 方法
                                         </a>
                                     </h4>
                             </div>
@@ -410,7 +409,7 @@
                             <div class="panel-heading">
                                 <h4 class="panel-title">
                                         <a data-parent="#accordion" data-toggle="collapse" href="#collapseFour">
-                                            �̷s�����b�o��C�� 4 ����--options ��k
+                                            最新消息在這邊。第 4 部分--options 方法
                                         </a>
                                     </h4>
                             </div>
@@ -433,12 +432,12 @@
                     $(function() { $('#collapseOne').collapse('hide') });
                     </script>
 
-                    <!-- ���X�b�o -->
+                    <!-- 頁碼在這 -->
                     <div class="text-center">
                         <ul class="pagination">
                             <li>
                                 <a href="#">
-                                        ?
+                                        «
                                     </a>
                             </li>
                             <li>
@@ -468,7 +467,7 @@
                             </li>
                             <li>
                                 <a href="#">
-                                        ?
+                                        »
                                     </a>
                             </li>
                         </ul>
@@ -476,12 +475,12 @@
                         <ul class="pager">
                             <li>
                                 <a href="#">
-                                            �e�@��
+                                            前一頁
                                         </a>
                             </li>
                             <li>
                                 <a href="#">
-                                            �U�@��
+                                            下一頁
                                         </a>
                             </li>
                         </ul>
@@ -493,12 +492,12 @@
                                 <div class="col-sm-12">
                                     <div class="col-sm-3">
                                         <p>
-                                            Copyright �d��You&Me 2017
+                                            Copyright 寵物You&Me 2017
                                         </p>
                                     </div>
                                     <div class="col-sm-3">
                                         <p>
-                                            ����ڭ�
+                                            關於我們
                                         </p>
                                     </div>
                                 </div>

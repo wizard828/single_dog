@@ -391,11 +391,11 @@ request.setAttribute("faqList", faqList);
 					
 					<!-- faq摺疊選單 -->
 					
-					<div class="panel-group" id="accordion">
-						<c:forEach var="faq" items="${faqList}" >
+					<div class="panel-group" id="accordion">						
 						<div class="panel panel-default">
 							<div class="panel-heading">
 								<h3 class="panel-title">
+								
 									<a data-parent="#accordion" data-toggle="collapse"
 										href="#collapseOne"> ${faq.faqTitle} </a>
 								</h3>
@@ -412,10 +412,42 @@ request.setAttribute("faqList", faqList);
 									</div>
 									<div class="answer">
 										<h4>${faq.faqAnswer}</h4>
+										
 									</div>
+									
 								</div>
+								
 							</div>
-						</c:forEach>
+						
+						</div>
+						
+						<div class="panel panel-success">
+							<div class="panel-heading">
+								<h4 class="panel-title">
+									<a data-parent="#accordion" data-toggle="collapse"
+										href="#collapseTwo"> 
+										
+										<c:forEach var="faq" items="${faqList}">
+								<c:if test="${faq.faqCategory =='寵物走失1'}">
+								<div>${faq.faqTitle}</div>
+								<div>${faq.faqAnswer}</div>
+								</c:if>
+								</c:forEach>
+										
+										 </a>
+								</h4>
+							</div>
+							<div class="panel-collapse collapse" id="collapseTwo">
+								
+								<c:forEach var="faq" items="${faqList}">
+								<c:if test="${faq.faqCategory =='寵物走失1'}">
+								<div>${faq.faqTitle}</div>
+								<div>${faq.faqAnswer}</div>
+								</c:if>
+								</c:forEach>
+								
+							</div>
+							
 						</div>
 						
 						<div class="panel panel-success">

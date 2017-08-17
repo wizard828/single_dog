@@ -1,14 +1,14 @@
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="Big5"%>
-<%  int rowsPerPage = 3;  //–掸计    
-    int rowNumber=0;      //羆掸计
-    int pageNumber=0;     //羆计      
-    int whichPage=1;      //材碭
-    int pageIndexArray[]=null;
-    int pageIndex=0; 
+<%  int rowsPerPage = 50;  //–掸计    
+    int rowNumber = 0;      //羆掸计
+    int pageNumber = 0;     //羆计      
+    int whichPage= 1 ;      //材碭
+    int pageIndexArray[] = null;
+    int pageIndex = 0; 
 %>
 
 <%  
-    rowNumber=list.size();
+    rowNumber=faqList.size();
     if (rowNumber%rowsPerPage !=0)
      pageNumber=rowNumber/rowsPerPage +1;
     else pageNumber=rowNumber/rowsPerPage;    
@@ -34,5 +34,5 @@
 <%if (pageNumber>0){%>
 <b><font color= red>材<%=whichPage%>/<%=pageNumber%></font></b>
 <%}%>
-<b>〈才  琩 高 兵 ン   ┮ ボ: <font color=red><%=rowNumber%></font>掸</b>
+<b>〈才琩高兵ン┮ボ: <font color=red><%=rowNumber%></font>掸</b>
 

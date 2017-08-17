@@ -12,15 +12,14 @@ public class FaqService {
 		dao = new FaqDAO();
 	}
 	
-	public Faq insert(int faqNo, int empNo, String faqCategory, String faqTitle, String faqAnswer){
+	public Faq insert(Integer empNo, String faqCategory, String faqTitle, String faqAnswer){
 		Faq faq = new Faq();
 		
-//		faq.setFaqNo(faqNo);
-//		faq.setEmpNo(empNo);
+		faq.setEmpNo(empNo);
 		faq.setFaqCategory(faqCategory);
 		faq.setFaqTitle(faqTitle);
 		faq.setFaqAnswer(faqAnswer);
-		
+		dao.insert(faq);
 		return faq;
 	}
 	

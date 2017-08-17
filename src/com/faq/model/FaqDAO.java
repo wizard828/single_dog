@@ -15,7 +15,7 @@ import com.faq.model.Faq;
 
 public class FaqDAO implements FaqDAO_Interface{
 	
-	 private static DataSource ds;
+	 private static DataSource ds=null;
 	 
 	    static {
 	        try {
@@ -27,7 +27,7 @@ public class FaqDAO implements FaqDAO_Interface{
 	    }
 	    
 	    private static final String INSERT_STMT = "INSERT INTO Faq(faqNO, empNo, faqCategory, faqTitle, faqAnswer)"
-	            + " VALUES(faqNO_SQ.NEXTVAL,?,?,?,?)";
+	            + " VALUES(faq_SQ.NEXTVAL,?,?,?,?)";
 	    private static final String UPDATE_STMT = "UPDATE Faq SET empNO = ?, faqCategory = ?, faqTitle = ?, faqAnswer = ?"
 	            + "faqNo = ?, faqCategory = ?, faqTitle = ?, faqAnswer = ? WHERE faqNO = ?";
 	    private static final String DELETE_STMT = "DELETE FROM Faq WHERE faqNO = ?";

@@ -11,9 +11,13 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
+import com.emp.model.Emp;
+import com.emp.model.EmpService;
 import com.faq.model.*;
 import com.faq.model.FaqService;
+import com.member.model.Member;
 
 @WebServlet("/back_end/faq/faq.do")
 public class FaqServlet extends HttpServlet {
@@ -26,6 +30,9 @@ public class FaqServlet extends HttpServlet {
 
 		req.setCharacterEncoding("UTF-8");
 		String action = req.getParameter("action");
+		HttpSession session=req.getSession();
+		Emp emp=(Emp)session.getAttribute("emp");
+		
 		
 //		用pk查
 		if ("getFaqNo_For_Display".equals(action)) { // 來自back_end/about_us/back_end/about_us/faq/faq_select_page.jsp的請求
@@ -395,67 +402,66 @@ public class FaqServlet extends HttpServlet {
 //		}
 
 //		新增還沒改完
-//        if ("insert".equals(action)) { // 來自addEmp.jsp的請求  
-//			
-//			List<String> errorMsgs = new LinkedList<String>();
-//			// Store this set in the request scope, in case we need to
-//			// send the ErrorPage view.
-//			req.setAttribute("errorMsgs", errorMsgs);
-//
-//			try {
-//				/***********************1.接收請求參數 - 輸入格式的錯誤處理*************************/
-//				Integer faqNo = new Integer(req.getParameter("newsNo").trim());
-//				Integer empNo = new Integer(req.getParameter("empNo").trim());				
-//				
-//				String faqCategory = req.getParameter("faqCategory").trim();
-//				if(faqCategory.isEmpty()){
-//					errorMsgs.add("請填入標題");
-//				}
-//				
-//				String faqTitle = req.getParameter("faqTitle").trim();
-//				if(faqTitle.isEmpty()){
-//					errorMsgs.add("請填入標題");
-//				}
-//							
-//				String faqAnswer = req.getParameter("faqAnswer").trim();								
-//				if(faqTitle.isEmpty()){
-//					errorMsgs.add("請填入內容");
-//				}
-//				
-//				Faq faq = new Faq();
-//				faq.setFaqNo(faqNo);
-//				faq.setEmpNo(empNo);
-//				faq.setFaqCategory(faqCategory);
-//				faq.setFaqTitle(faqTitle);
-//				faq.setFaqAnswer(faqAnswer);
-//
-//				// Send the use back to the form, if there were errors
-//				if (!errorMsgs.isEmpty()) {
-//					req.setAttribute("faq", faq); // 含有輸入格式錯誤的empVO物件,也存入req
-//					RequestDispatcher failureView = req
-//							.getRequestDispatcher("/back_end/about_us/faq/addFaq.jsp");
-//					failureView.forward(req, res);
-//					return; //程式中斷
-//				}
-//				
-//				/***************************2.開始新增資料***************************************/
-//				FaqService faqService = new FaqService();
-//				faq = FaqService.insert(faqNo, empNo, faqCategory, faqTitle, faqAnswer);
-//				
-//				/***************************3.新增完成,準備轉交(Send the Success view)***********/
-//				
-//				String url = "/back_end/about_us/faq/listAllFaq.jsp";
-//				RequestDispatcher successView = req.getRequestDispatcher(url); // 新增成功後轉交listAllEmp.jsp
-//				successView.forward(req, res);				
-//				
-//				/***************************其他可能的錯誤處理**********************************/
-//			} catch (Exception e) {
-//				errorMsgs.add(e.getMessage());
-//				RequestDispatcher failureView = req
-//						.getRequestDispatcher("/back_end/about_us/faq/addFaq.jsp");
-//				failureView.forward(req, res);
-//			}
-//		}
+        if ("insert".equals(action)) { // 來自addEmp.jsp的請求  
+			
+			List<String> errorMsgs = new LinkedList<String>();
+			// Store this set in the request scope, in case we need to
+			// send the ErrorPage view.
+			req.setAttribute("errorMsgs", errorMsgs);
+
+			try {
+				/***********************1.接收請求參數 - 輸入格式的錯誤處理*************************/
+			
+				Integer empNo = emp.getEmpNo();				
+				
+				String faqCategory = req.getParameter("faqCategory").trim();
+				if(faqCategory.isEmpty()){
+					errorMsgs.add("請填入標題");
+				}
+				
+				String faqTitle = req.getParameter("faqTitle").trim();
+				if(faqTitle.isEmpty()){
+					errorMsgs.add("請填入標題");
+				}
+							
+				String faqAnswer = req.getParameter("faqAnswer").trim();								
+				if(faqTitle.isEmpty()){
+					errorMsgs.add("請填入內容");
+				}
+				
+				Faq faq = new Faq();
+				faq.setEmpNo(empNo);
+				faq.setFaqCategory(faqCategory);
+				faq.setFaqTitle(faqTitle);
+				faq.setFaqAnswer(faqAnswer);
+
+				// Send the use back to the form, if there were errors
+				if (!errorMsgs.isEmpty()) {
+					req.setAttribute("faq", faq); // 含有輸入格式錯誤的empVO物件,也存入req
+					RequestDispatcher failureView = req
+							.getRequestDispatcher("/back_end/about_us/faq/addFaq.jsp");
+					failureView.forward(req, res);
+					return; //程式中斷
+				}
+				
+				/***************************2.開始新增資料***************************************/
+				FaqService faqService = new FaqService();
+				faq = faqService.insert( empNo, faqCategory, faqTitle, faqAnswer);
+				
+				/***************************3.新增完成,準備轉交(Send the Success view)***********/
+				
+				String url = "/back_end/about_us/faq/listAllFaq.jsp";
+				RequestDispatcher successView = req.getRequestDispatcher(url); // 新增成功後轉交listAllEmp.jsp
+				successView.forward(req, res);				
+				
+				/***************************其他可能的錯誤處理**********************************/
+			} catch (Exception e) {
+				errorMsgs.add(e.getMessage());
+				RequestDispatcher failureView = req
+						.getRequestDispatcher("/back_end/about_us/faq/addFaq.jsp");
+				failureView.forward(req, res);
+			}
+		}
 		
      
 		if ("delete".equals(action)) { // 來自listAllEmp.jsp 或  /dept/listEmps_ByDeptno.jsp的請求

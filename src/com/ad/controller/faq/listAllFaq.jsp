@@ -12,8 +12,8 @@
 
 <%
 	FaqService faqService = new FaqService();
-	List<Faq> list = faqService.getAll();
-	pageContext.setAttribute("faqList",list);
+	List<Faq> faqList = faqService.getAll();
+	pageContext.setAttribute("faqList",faqList);
 %>
 
 

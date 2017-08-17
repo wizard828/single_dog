@@ -412,13 +412,9 @@ request.setAttribute("faqList", faqList);
 									</div>
 									<div class="answer">
 										<h4>${faq.faqAnswer}</h4>
-										
 									</div>
-									
 								</div>
-								
 							</div>
-						
 						</div>
 						
 						<div class="panel panel-success">
@@ -427,21 +423,21 @@ request.setAttribute("faqList", faqList);
 									<a data-parent="#accordion" data-toggle="collapse"
 										href="#collapseTwo"> 
 										
-										<c:forEach var="faq" items="${faqList}">
-								<c:if test="${faq.faqCategory =='寵物走失1'}">
+								<c:forEach var="faq" items="${faqList}">
+								<c:if test="${faq.faqCategory =='寵物走失'}">
 								<div>${faq.faqTitle}</div>
 								<div>${faq.faqAnswer}</div>
 								</c:if>
 								</c:forEach>
 										
-										 </a>
+									</a>
 								</h4>
 							</div>
 							<div class="panel-collapse collapse" id="collapseTwo">
 								
 								<c:forEach var="faq" items="${faqList}">
-								<c:if test="${faq.faqCategory =='寵物走失1'}">
-								<div>${faq.faqTitle}</div>
+								<c:if test="${faq.faqCategory =='寵物走失'}">
+<%-- 								<div>${faq.faqTitle}</div> --%>
 								<div>${faq.faqAnswer}</div>
 								</c:if>
 								</c:forEach>

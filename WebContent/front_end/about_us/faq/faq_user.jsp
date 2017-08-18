@@ -6,13 +6,7 @@
 <!DOCTYPE html>
 <html lang="">
 
-<% 
 
-FaqService faqService = new FaqService();
-List<Faq> faqList = faqService.getAll();
-request.setAttribute("faqList", faqList);
-
-%>
 
 <head>
     <!--  ===================================================
@@ -139,68 +133,61 @@ request.setAttribute("faqList", faqList);
                 <div id="menu" data-spy="affix" data-offset-top="200">
 					<div class="panel list-group list-color">
 						<a class="list-group-item" data-parent="#menu" data-target="#sm1"
-							data-toggle="collapse" href="#"> 註冊問題 <span
+							data-toggle="collapse" href="#" name="faqCategory" value="註冊問題" > 註冊問題 <span
 							class="glyphicon glyphicon-triangle-bottom pull-right"> </span>
 						</a>
-						<div class="sublinks collapse" id="sm1">
-							<a class="list-group-item small " href="# "> 問題1 </a> <a
-								class="list-group-item small " href="# "> 問題2 </a> <a
-								class="list-group-item small " href="# "> 問題3 </a> <a
-								class="list-group-item small " href="# "> 問題4 </a> <a
-								class="list-group-item small " href="# "> 問題5 </a>
-						</div>
+						
 						<a class="list-group-item" data-parent="#menu" data-target="#sm2"
-							data-toggle="collapse" href="#"> 登入問題 <span
+							data-toggle="collapse" href="#" name="faqCategory" value="登入問題"> 登入問題 <span
 							class="glyphicon glyphicon-triangle-bottom pull-right"> </span>
 						</a>
-						<div class="sublinks collapse" id="sm2">
-							<a class="list-group-item small " href="# "> 問題1 </a> <a
-								class="list-group-item small " href="# "> 問題2 </a> <a
-								class="list-group-item small " href="# "> 問題3 </a> <a
-								class="list-group-item small " href="# "> 問題4 </a> <a
-								class="list-group-item small " href="# "> 問題5 </a>
-						</div>
+
 						<a class="list-group-item" data-parent="#menu" data-target="#sm3"
-							data-toggle="collapse" href="#"> 約會問題 <span
+							data-toggle="collapse" href="#" name="faqCategory" value="約會問題"> 約會問題 <span
 							class="glyphicon glyphicon-triangle-bottom pull-right"> </span>
 						</a>
-						<div class="sublinks collapse" id="sm3">
-							<a class="list-group-item small " href="# "> 問題1 </a> <a
-								class="list-group-item small " href="# "> 問題2 </a> <a
-								class="list-group-item small " href="# "> 問題3 </a> <a
-								class="list-group-item small " href="# "> 問題4 </a> <a
-								class="list-group-item small " href="# "> 問題5 </a>
-						</div>
+
 						<a class="list-group-item" data-parent="#menu" data-target="#sm4"
-							data-toggle="collapse" href="#"> 交易問題 <span
+							data-toggle="collapse" href="#" name="faqCategory" value="交易問題"> 交易問題 <span
 							class="glyphicon glyphicon-triangle-bottom pull-right"> </span>
 						</a>
-						<div class="sublinks collapse" id="sm4">
-							<a class="list-group-item small " href="# "> 問題1 </a> <a
-								class="list-group-item small " href="# "> 問題2 </a> <a
-								class="list-group-item small " href="# "> 問題3 </a> <a
-								class="list-group-item small " href="# "> 問題4 </a> <a
-								class="list-group-item small " href="# "> 問題5 </a>
-						</div>
-						<a class="list-group-item" data-parent="#menu" data-target="#sm5"
-							data-toggle="collapse" href="#"> 其他問題 <span
-							class="glyphicon glyphicon-triangle-bottom pull-right"> </span>
-						</a>
-						<div class="sublinks collapse" id="sm5">
-							<a class="list-group-item small " href="# "> 問題1 </a> <a
-								class="list-group-item small " href="# "> 問題2 </a> <a
-								class="list-group-item small " href="# "> 問題3 </a> <a
-								class="list-group-item small " href="# "> 問題4 </a> <a
-								class="list-group-item small " href="# "> 問題5 </a>
-						</div>
+
+<!-- 						<a class="list-group-item" data-parent="#menu" data-target="#sm5" -->
+<!-- 							data-toggle="collapse" href="" name="faqCategory" value="其他問題"> 其他問題 <span -->
+<!-- 							class="glyphicon glyphicon-triangle-bottom pull-right"> </span> -->
+<!-- 						</a> -->
+	
+<!-- 備用的側邊攔   -->
+	<FORM METHOD="post" ACTION="<%=request.getContextPath()%>/back_end/faq/faq.do" >
+     <input type="submit" name="faqCategory" value="登入問題">
+     <input type="hidden" name="action" value="faq_for_user">
+	 </FORM>
+	
+	<FORM METHOD="post" ACTION="<%=request.getContextPath()%>/back_end/faq/faq.do" >
+     <input type="submit" name="faqCategory" value="約會問題">
+     <input type="hidden" name="action" value="faq_for_user">
+	 </FORM>
+	
+	<FORM METHOD="post" ACTION="<%=request.getContextPath()%>/back_end/faq/faq.do" >
+     <input type="submit" name="faqCategory" value="註冊問題">
+     <input type="hidden" name="action" value="faq_for_user">
+	 </FORM>
+	
+	<FORM METHOD="post" ACTION="<%=request.getContextPath()%>/back_end/faq/faq.do" >
+     <input type="submit" name="faqCategory" value="交易問題">
+     <input type="hidden" name="action" value="faq_for_user">
+	 </FORM>
+	
+	<FORM METHOD="post" ACTION="<%=request.getContextPath()%>/back_end/faq/faq.do" >
+	<input type="submit" name="faqCategory" value="其他問題">
+	<input type="hidden" name="action" value="faq_for_user">
+	</FORM>
+						
+<%-- 						<%=request.getContextPath()%>/back_end/faq/faq.do?faqCategory=其他問題&action=getRealtive_For_Category --%>
+						
 					</div>
 				</div>
 			</div>
-
-
-
-
-
 
             <div class="col-xs-12 col-sm-10">
                 <div class="row">
@@ -351,10 +338,28 @@ request.setAttribute("faqList", faqList);
 					<div>
 						<form class="navbar-form navbar-right" role="search">
 							<div class="form-group">
-								<input class="form-control" placeholder="請輸入關鍵字" type="text">
-								</input>
+
+
+<!-- 查詢功能在這 -->
+     <FORM METHOD="post" ACTION="<%=request.getContextPath()%>/back_end/faq/faq.do" >
+     <input type="text" name="faqCategory" placeholder="請輸入想查詢的類別">
+     <button class="btn btn-success" type="submit">搜尋</button>
+     <input type="hidden" name="action" value="faq_for_user">
+ 	 </FORM>
+     
+     <FORM METHOD="post" ACTION="<%=request.getContextPath()%>/back_end/faq/faq.do" >
+     <input type="text" name="faqTitle" placeholder="請輸入想查詢的標題">
+     <button class="btn btn-success" type="submit">搜尋</button>
+     <input type="hidden" name="action" value="getRealtive_For_Title">
+     </FORM>
+     
+     <FORM METHOD="post" ACTION="<%=request.getContextPath()%>/back_end/faq/faq.do" >
+     <input type="text" name="faqAnswer" placeholder="請輸入想查詢的答案">
+     <button class="btn btn-success" type="submit">搜尋</button>
+     <input type="hidden" name="action" value="getRealtive_For_Answer">
+	 </FORM>
+
 							</div>
-							<button class="btn btn-default" type="submit">搜尋</button>
 						</form>
 					</div>
 
@@ -362,30 +367,13 @@ request.setAttribute("faqList", faqList);
 					<div class="breadcrumb-container">
 						<div class="breadcrumb-row">
 							<ol class="breadcrumb">
-								<li><a href="#"> 首頁 </a></li>
-								<li><a href="#"> 常見問題 </a></li>
-								<li class="active">太神啦~</li>
+								<li><a href="<%=request.getContextPath() %>/front_end/index.html"> 首頁 </a></li>
+								<li><a href="<%=request.getContextPath() %>/front_end/about_us/faq/faq_user.jsp"> 常見問題 </a></li>
 							</ol>
 						</div>
 					</div>
  
-<!-- 查詢功能在這 -->
-<li>
-     <FORM METHOD="post" ACTION="<%=request.getContextPath()%>/back_end/faq/faq.do" >
-       <input type="text" name="faqCategory" placeholder="請輸入想查詢的類別">
-       <input type="submit" value="查詢">
-       <input type="hidden" name="action" value="getRealtive_For_Category">
- 
-     <FORM METHOD="post" ACTION="<%=request.getContextPath()%>/back_end/faq/faq.do" >
-       <input type="text" name="faqTitle" placeholder="請輸入想查詢的標題">
-       <input type="submit" value="查詢">
-       <input type="hidden" name="action" value="getRealtive_For_Title">
-  
-     <FORM METHOD="post" ACTION="<%=request.getContextPath()%>/back_end/faq/faq.do" >
-       <input type="text" name="faqAnswer" placeholder="請輸入想查詢的答案">
-       <input type="submit" value="查詢">
-       <input type="hidden" name="action" value="getRealtive_For_Answer">
-</li>
+
   
 					
 					
@@ -418,33 +406,24 @@ request.setAttribute("faqList", faqList);
 						</div>
 						
 						<div class="panel panel-success">
-							<div class="panel-heading">
+								
+								<% int count=0; %>
+								<c:forEach var="faq" items="${faqList}">
+								<div class="panel-heading">
 								<h4 class="panel-title">
 									<a data-parent="#accordion" data-toggle="collapse"
-										href="#collapseTwo"> 
-										
-								<c:forEach var="faq" items="${faqList}">
-								<c:if test="${faq.faqCategory =='寵物走失'}">
-								<div>${faq.faqTitle}</div>
-								<div>${faq.faqAnswer}</div>
-								</c:if>
-								</c:forEach>
-										
-									</a>
+										href="#FAQ<%=count%>"> ${faq.faqTitle}</a>
 								</h4>
-							</div>
-							<div class="panel-collapse collapse" id="collapseTwo">
-								
-								<c:forEach var="faq" items="${faqList}">
-								<c:if test="${faq.faqCategory =='寵物走失'}">
-<%-- 								<div>${faq.faqTitle}</div> --%>
-								<div>${faq.faqAnswer}</div>
-								</c:if>
+						        </div>
+								<div class="panel-collapse collapse" id="FAQ<%=count%>">
+									<div class="panel-body">${faq.faqAnswer}</div>
+								</div>
+							<% count++;%>
 								</c:forEach>
 								
 							</div>
 							
-						</div>
+						
 						
 						<div class="panel panel-success">
 							<div class="panel-heading">

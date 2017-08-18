@@ -237,7 +237,7 @@ public class FaqServlet extends HttpServlet {
 			}
 		}
 		
-//		給前端用的
+//		給前端用的(按category)
 		if ("faq_for_user".equals(action)) { // 來自back_end/about_us/faq/faq_select_page.jsp的請求
 
 				/***************************1.接收請求參數 - 輸入格式的錯誤處理**********************/

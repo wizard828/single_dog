@@ -133,29 +133,29 @@
                 <div id="menu" data-spy="affix" data-offset-top="200">
 					<div class="panel list-group list-color">
 						<a class="list-group-item" data-parent="#menu" data-target="#sm1"
-							data-toggle="collapse" href="#" name="faqCategory" value="註冊問題" > 註冊問題 <span
+							data-toggle="collapse" href="" name="faqCategory" value="註冊問題" > 註冊問題 <span
 							class="glyphicon glyphicon-triangle-bottom pull-right"> </span>
 						</a>
 						
 						<a class="list-group-item" data-parent="#menu" data-target="#sm2"
-							data-toggle="collapse" href="#" name="faqCategory" value="登入問題"> 登入問題 <span
+							data-toggle="collapse" href="" name="faqCategory" value="登入問題"> 登入問題 <span
 							class="glyphicon glyphicon-triangle-bottom pull-right"> </span>
 						</a>
 
 						<a class="list-group-item" data-parent="#menu" data-target="#sm3"
-							data-toggle="collapse" href="#" name="faqCategory" value="約會問題"> 約會問題 <span
+							data-toggle="collapse" href="" name="faqCategory" value="約會問題"> 約會問題 <span
 							class="glyphicon glyphicon-triangle-bottom pull-right"> </span>
 						</a>
 
 						<a class="list-group-item" data-parent="#menu" data-target="#sm4"
-							data-toggle="collapse" href="#" name="faqCategory" value="交易問題"> 交易問題 <span
+							data-toggle="collapse" href="" name="faqCategory" value="交易問題"> 交易問題 <span
 							class="glyphicon glyphicon-triangle-bottom pull-right"> </span>
 						</a>
 
-<!-- 						<a class="list-group-item" data-parent="#menu" data-target="#sm5" -->
-<!-- 							data-toggle="collapse" href="" name="faqCategory" value="其他問題"> 其他問題 <span -->
-<!-- 							class="glyphicon glyphicon-triangle-bottom pull-right"> </span> -->
-<!-- 						</a> -->
+						<a class="list-group-item" data-parent="#menu" data-target="#sm5"
+							data-toggle="collapse" href="" name="faqCategory" value="其他問題"> 其他問題 <span
+							class="glyphicon glyphicon-triangle-bottom pull-right"> </span>
+						</a>
 	
 <!-- 備用的側邊攔   -->
 	<FORM METHOD="post" ACTION="<%=request.getContextPath()%>/back_end/faq/faq.do" >

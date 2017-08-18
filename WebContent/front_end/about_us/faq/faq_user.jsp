@@ -48,6 +48,12 @@
     margin: 0 auto;
 }
 
+/* 備用側邊攔按鈕 */
+input[type="submit"]{
+ color: #000000;
+ width: 100%;
+}
+
 /*麵包屑*/
 .breadcrumb-container {
 	margin-top: 0.5em;
@@ -125,6 +131,8 @@
         </div>
         <!-- /.container -->
     </nav>
+    
+<!-- 原本該有用的側邊攔 -->
 <div class="container-fluid">
         <div class="row">
             <div class="col-xs-12 col-sm-2">
@@ -159,17 +167,17 @@
 	
 <!-- 備用的側邊攔   -->
 	<FORM METHOD="post" ACTION="<%=request.getContextPath()%>/back_end/faq/faq.do" >
+     <input type="submit" name="faqCategory" value="註冊問題">
+     <input type="hidden" name="action" value="faq_for_user">
+	 </FORM>
+	
+	<FORM METHOD="post" ACTION="<%=request.getContextPath()%>/back_end/faq/faq.do" >
      <input type="submit" name="faqCategory" value="登入問題">
      <input type="hidden" name="action" value="faq_for_user">
 	 </FORM>
 	
 	<FORM METHOD="post" ACTION="<%=request.getContextPath()%>/back_end/faq/faq.do" >
      <input type="submit" name="faqCategory" value="約會問題">
-     <input type="hidden" name="action" value="faq_for_user">
-	 </FORM>
-	
-	<FORM METHOD="post" ACTION="<%=request.getContextPath()%>/back_end/faq/faq.do" >
-     <input type="submit" name="faqCategory" value="註冊問題">
      <input type="hidden" name="action" value="faq_for_user">
 	 </FORM>
 	
@@ -237,7 +245,7 @@
 											src="<%= request.getContextPath() %>/front_end/images/pets_try3_resized.jpg">
 										<div class="container">
 											<div class="carousel-caption">
-												<h1>標題</h1>
+												<h1>問與答</h1>
 												<p>內文</p>
 												<p>
 													<a class="btn btn-lg btn-primary" href="#" role="button">
@@ -252,7 +260,7 @@
 											src="<%= request.getContextPath() %>/front_end/images/pets_try3_resized.jpg">
 										<div class="container">
 											<div class="carousel-caption">
-												<h1>標題</h1>
+												<h1>FAQ</h1>
 												<p>內文？</p>
 												<p>
 													<a class="btn btn-lg btn-primary" href="#" role="button">
@@ -267,7 +275,7 @@
 											src="<%= request.getContextPath() %>/front_end/images/pets_try3_resized.jpg">
 										<div class="container">
 											<div class="carousel-caption">
-												<h1>標題</h1>
+												<h1>問與答</h1>
 												<p>內文？</p>
 												<p>
 													<a class="btn btn-lg btn-primary" href="#" role="button">
@@ -282,7 +290,7 @@
 											src="<%= request.getContextPath() %>/front_end/images/pets_try3_resized.jpg">
 										<div class="container">
 											<div class="carousel-caption">
-												<h1>標題</h1>
+												<h1>FAQ</h1>
 												<p>內文？</p>
 												<p>
 													<a class="btn btn-lg btn-primary" href="#" role="button">
@@ -297,7 +305,7 @@
 											src="<%= request.getContextPath() %>/front_end/images/pets_try3_resized.jpg">
 										<div class="container">
 											<div class="carousel-caption">
-												<h1>標題</h1>
+												<h1>問與答</h1>
 												<p>內文？</p>
 												<p>
 													<a class="btn btn-lg btn-primary" href="#" role="button">
@@ -312,7 +320,7 @@
 										<img alt="" src="<%= request.getContextPath() %>/front_end/images/pets_try3_resized.jpg">
 										<div class="container">
 											<div class="carousel-caption">
-												<h1>標題</h1>
+												<h1>FAQ</h1>
 												<p>內文</p>
 												<p>
 													<a class="btn btn-lg btn-primary" href="#" role="button">
@@ -336,11 +344,14 @@
 					</div>
 					<!-- 搜尋表單 -->
 					<div>
+						
 						<form class="navbar-form navbar-right" role="search">
+							
 							<div class="form-group">
 
 
 <!-- 查詢功能在這 -->
+
      <FORM METHOD="post" ACTION="<%=request.getContextPath()%>/back_end/faq/faq.do" >
      <input type="text" name="faqCategory" placeholder="請輸入想查詢的類別">
      <button class="btn btn-success" type="submit">搜尋</button>
@@ -372,38 +383,15 @@
 							</ol>
 						</div>
 					</div>
- 
-
-  
 					
 					
 					<!-- faq摺疊選單 -->
 					
 					<div class="panel-group" id="accordion">						
-						<div class="panel panel-default">
-							<div class="panel-heading">
-								<h3 class="panel-title">
-								
-									<a data-parent="#accordion" data-toggle="collapse"
-										href="#collapseOne"> ${faq.faqTitle} </a>
-								</h3>
-							</div>
-							
 							<div class="panel-collapse collapse in" id="collapseOne">
-								<div class="panel-body">
 									<!-- faq重點在這 -->
-									<div class="question">
-										<blockquote>
-											<p>這是ㄧ個blockquote</p>
-											<cite class=""> 單身狗關心您 </cite>
-										</blockquote>
-									</div>
-									<div class="answer">
-										<h4>${faq.faqAnswer}</h4>
-									</div>
-								</div>
 							</div>
-						</div>
+					</div>
 						
 						<div class="panel panel-success">
 								
@@ -433,7 +421,12 @@
 								</h4>
 							</div>
 							<div class="panel-collapse collapse" id="collapseTwo">
-								<div class="panel-body">Nihil anim keffiyeh helvetica,
+								<div class="panel-body">
+									<blockquote>
+											<p>這是ㄧ個blockquote</p>
+											<cite class=""> 單身狗關心您 </cite>
+									</blockquote>
+									Nihil anim keffiyeh helvetica,
 									craft beer labore wes anderson cred nesciunt sapiente ea
 									proident. Ad vegan excepteur butcher vice lomo.</div>
 							</div>
@@ -505,20 +498,22 @@
 							<div class="col-md-12 col-md-12">
 								<div class="user-submit">
 									<h4>
-										以上解答有幫助到你嗎? <input type="radio" name="yes" value="yes">有
-										<input type="radio" name="no" value="no">沒有
+										以上解答有幫助到你嗎?
+										<input type="radio" name="radio" value="yes">有
+										<input type="radio" name="radio" value="no" onclick="alert('yeah~');">沒有<p>
 									</h4>
+										
 									<div class="dropdown">
 										<h4>
 											問題類別 <select id="faq_category">
 												<option value="defaultValue">請選擇</option>
-												<option value="">類別1</option>
-												<option value="">類別2</option>
-												<option value="">類別3</option>
-												<option value="">類別4</option>
-												<option value="">類別5</option>
-											</select> 主旨<input type="text" id="user_submit_title"
-												placeholder="你的問題是?">
+												<option value="getRealtive_For_Category">註冊問題</option>
+												<option value="getRealtive_For_Category">登入問題</option>
+												<option value="getRealtive_For_Category">約會問題</option>
+												<option value="getRealtive_For_Category">交易問題</option>
+												<option value="getRealtive_For_Category">其他問題</option>
+											</select> 
+											主旨<input type="text" id="user_submit_title" placeholder="你的問題是?">
 										</h4>
 
 									</div>
@@ -526,12 +521,65 @@
 									<textarea class="user_submit" id="user_submit"
 										placeholder="請描述一下問題內容" onfocus="this.select()" required
 										data-validation-required-message="Please enter a message.">
-                                </textarea>
+                                	</textarea>
+									</div>
+								
+<!--								<div class="btn-group"> -->
+<!-- 									<a href="" class="btn btn-primary" role="button" onclick="safeSubmit" >確認</a> <a -->
+<!-- 										href="" class="btn btn-default" role="button">取消</a> -->
+<!-- 								</div> -->
+								
+								<!-- 確認submit -->
+								<button type="button" class="btn btn-primary btn-mi" data-toggle="modal" data-target="#myModal">確認</button>
+								<!-- 這邊送出資料 -->
+								<input type="hidden" name="action" value="insert" >
+								
+								<!-- Modal -->
+								<div id="myModal" class="modal fade" role="dialog">
+								  <div class="modal-dialog">
+								
+								    <!-- Modal content-->
+								    <div class="modal-content">
+								      <div class="modal-header">
+								        <button type="button" class="close" data-dismiss="modal">&times;</button>
+								        <h4 class="modal-title">感謝你的提交</h4>
+								      </div>
+								      <div class="modal-body">
+								        <p>問題已經送出囉~</p>
+								      </div>
+								      <div class="modal-footer">
+								        <button type="button" class="btn btn-primary" data-dismiss="modal">關閉</button>
+								      </div>
+								    </div>
+								
+								  </div>
 								</div>
-								<div class="btn-group">
-									<a href="#" class="btn btn-primary" role="button">確認</a> <a
-										href="#" class="btn btn-default" role="button">取消</a>
+								
+								<!-- 取消submit -->
+								<button type="button" class="btn btn-danger btn-mi" data-toggle="modal" data-target="#cancle-submit">取消</button>
+								
+								<!-- Modal -->
+								<div id="cancle-submit" class="modal fade" role="dialog">
+								  <div class="modal-dialog">
+								
+								    <!-- Modal content-->
+								    <div class="modal-content">
+								      <div class="modal-header">
+								        <button type="button" class="close" data-dismiss="modal">&times;</button>
+								        <h4 class="modal-title">取消提交</h4>
+								      </div>
+								      <div class="modal-body">
+								        <p>確認按下去就什麼都沒有了喔~</p>
+								      </div>
+								      <div class="modal-footer">
+								        <button type="button" class="btn btn-danger" data-dismiss="modal">確定</button>
+								      </div>
+								    </div>
+								
+								  </div>
 								</div>
+								
+								
 								<!-- 下面測試用 -->
 								<!-- <script>
                                 function getValue() {

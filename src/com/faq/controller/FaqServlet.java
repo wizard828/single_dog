@@ -19,12 +19,11 @@ import com.faq.model.*;
 import com.faq.model.FaqService;
 import com.member.model.Member;
 
-@WebServlet("/back_end/faq/faq.do")
+//@WebServlet("/back_end/faq/faq.do")
 public class FaqServlet extends HttpServlet {
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+	protected void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
+		doPost( req,  res);
 	}
-
 	public void doPost(HttpServletRequest req, HttpServletResponse res)
 			throws ServletException, IOException {
 
@@ -177,6 +176,25 @@ public class FaqServlet extends HttpServlet {
 				successView.forward(req, res);
 
 		}
+		
+//		給前端用的(按category)				吳神說留著紀念
+//		if ("faq_for_user".equals(action)) { // 來自back_end/about_us/faq/faq_select_page.jsp的請求
+//				/***************************1.接收請求參數 - 輸入格式的錯誤處理**********************/
+//				String faqCategory = req.getParameter("faqCategory");
+//				
+//				System.out.println(faqCategory);
+//				/***************************2.開始查詢資料*****************************************/
+//				FaqService faqService = new FaqService();
+//				List<Faq> faqList = faqService.findByCategory(faqCategory);
+//
+//				/***************************3.查詢完成,準備轉交(Send the Success view)*************/
+//				req.setAttribute("faqList", faqList); // 資料庫取出的empVO物件,存入req
+//				String url = "/front_end/about_us/faq/faq_user.jsp";
+//				RequestDispatcher successView = req.getRequestDispatcher(url); // 成功轉交listOneEmp.jsp
+//				successView.forward(req, res);
+//				return;
+//
+//		}
 
 //		用title查
 		if ("getRealtive_For_Title".equals(action)) { // 來自back_end/about_us/faq/faq_select_page.jsp的請求
@@ -237,24 +255,7 @@ public class FaqServlet extends HttpServlet {
 			}
 		}
 		
-//		給前端用的(按category)
-		if ("faq_for_user".equals(action)) { // 來自back_end/about_us/faq/faq_select_page.jsp的請求
 
-				/***************************1.接收請求參數 - 輸入格式的錯誤處理**********************/
-				String faqCategory = req.getParameter("faqCategory");
-				
-				System.out.println(faqCategory);
-				/***************************2.開始查詢資料*****************************************/
-				FaqService faqService = new FaqService();
-				List<Faq> faqList = faqService.findByCategory(faqCategory);
-
-				/***************************3.查詢完成,準備轉交(Send the Success view)*************/
-				req.setAttribute("faqList", faqList); // 資料庫取出的empVO物件,存入req
-				String url = "/front_end/about_us/faq/faq_user.jsp";
-				RequestDispatcher successView = req.getRequestDispatcher(url); // 成功轉交listOneEmp.jsp
-				successView.forward(req, res);
-
-		}
 		
 //		用answer查
 		if ("getRealtive_For_Answer".equals(action)) { // 來自back_end/about_us/faq/faq_select_page.jsp的請求

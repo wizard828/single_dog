@@ -1,4 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=BIG5" pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="BIG5"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ page import="com.faq.model.*"%>
@@ -9,10 +10,8 @@
 
 
 <head>
-    <!--  ===================================================
-    <meta charset="UTF-8"> ==================================
-    =========================================================-->
-    <meta charset="BIG-5">
+
+    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>Title Page</title>
@@ -31,7 +30,7 @@
     <![endif]-->
 <style>
 
-/*æ”¹å¯«colorplanè£¡é¢çš„é€™å€‹æ¨™ç±¤*/
+/*§ï¼gcolorplan¸Ì­±ªº³o­Ó¼ĞÅÒ*/
 .postion-left-group{
 /*   position:relative; */
 /*   margin-top: 28rem; */
@@ -39,7 +38,7 @@
   display:block;
 }
 
-/*ä¸¦åœ¨ä½ çš„colorplan CSSä¸­åŠ å…¥é€™å€‹*/
+/*¨Ã¦b§Aªºcolorplan CSS¤¤¥[¤J³o­Ó*/
 .img-bg{
     opacity:1;
     background-color:#ccc;
@@ -48,13 +47,13 @@
     margin: 0 auto;
 }
 
-/* å‚™ç”¨å´é‚Šæ””æŒ‰éˆ• */
+/* ³Æ¥Î°¼ÃäÄd«ö¶s */
 input[type="submit"]{
  color: #000000;
  width: 100%;
 }
 
-/*éºµåŒ…å±‘*/
+/*ÄÑ¥]®h*/
 .breadcrumb-container {
 	margin-top: 0.5em;
 }
@@ -92,37 +91,37 @@ input[type="submit"]{
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand logo" href="index.html">å¯µç‰©You&amp;Me</a>
+                <a class="navbar-brand logo" href="index.html">Ãdª«You&amp;Me</a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li>
-                        <a href="date.html">ç´„æœƒå•†å“</a>
+                        <a href="date.html">¬ù·|°Ó«~</a>
                     </li>
                     <li>
-                        <a href="product.html">å•†åŸ</a>
+                        <a href="product.html">°Ó«°</a>
                     </li>
                     <li>
-                        <a href="activity.html">æ´»å‹•</a>
+                        <a href="activity.html">¬¡°Ê</a>
                     </li>
                     <li>
-                        <a href="diary.html">å¯µç‰©æ—¥èªŒ</a>
+                        <a href="diary.html">Ãdª«¤é»x</a>
                     </li>
                 </ul>
                 <div class="nav collapse navbar-collapse navbar-right" id="login">
                     <ul class="nav navbar-nav">
                         <li>
-                            <a href="about.html">è³¼ç‰©è»Š</a>
+                            <a href="about.html">ÁÊª«¨®</a>
                         </li>
                         <li>
-                            <a href="about.html">ç«™å…§ä¿¡</a>
+                            <a href="about.html">¯¸¤º«H</a>
                         </li>
                         <li>
-                            <a href="services.html">æœƒå“¡å°ˆå€</a>
+                            <a href="services.html">·|­û±M°Ï</a>
                         </li>
                         <li>
-                            <a href="contact.html">ç™»å‡º</a>
+                            <a href="contact.html">µn¥X</a>
                         </li>
                     </ul>
                 </div>
@@ -132,7 +131,7 @@ input[type="submit"]{
         <!-- /.container -->
     </nav>
     
-<!-- åŸæœ¬è©²æœ‰ç”¨çš„å´é‚Šæ”” -->
+<!-- ­ì¥»¸Ó¦³¥Îªº°¼ÃäÄd -->
 <div class="container-fluid">
         <div class="row">
             <div class="col-xs-12 col-sm-2">
@@ -141,57 +140,57 @@ input[type="submit"]{
                 <div id="menu" data-spy="affix" data-offset-top="200">
 					<div class="panel list-group list-color">
 						<a class="list-group-item" data-parent="#menu" data-target="#sm1"
-							data-toggle="collapse" href="" name="faqCategory" value="è¨»å†Šå•é¡Œ" > è¨»å†Šå•é¡Œ <span
+							data-toggle="collapse" href="" name="faqCategory" value="µù¥U°İÃD" > µù¥U°İÃD <span
 							class="glyphicon glyphicon-triangle-bottom pull-right"> </span>
 						</a>
 						
 						<a class="list-group-item" data-parent="#menu" data-target="#sm2"
-							data-toggle="collapse" href="" name="faqCategory" value="ç™»å…¥å•é¡Œ"> ç™»å…¥å•é¡Œ <span
+							data-toggle="collapse" href="" name="faqCategory" value="µn¤J°İÃD"> µn¤J°İÃD <span
 							class="glyphicon glyphicon-triangle-bottom pull-right"> </span>
 						</a>
 
 						<a class="list-group-item" data-parent="#menu" data-target="#sm3"
-							data-toggle="collapse" href="" name="faqCategory" value="ç´„æœƒå•é¡Œ"> ç´„æœƒå•é¡Œ <span
+							data-toggle="collapse" href="" name="faqCategory" value="¬ù·|°İÃD"> ¬ù·|°İÃD <span
 							class="glyphicon glyphicon-triangle-bottom pull-right"> </span>
 						</a>
 
 						<a class="list-group-item" data-parent="#menu" data-target="#sm4"
-							data-toggle="collapse" href="" name="faqCategory" value="äº¤æ˜“å•é¡Œ"> äº¤æ˜“å•é¡Œ <span
+							data-toggle="collapse" href="" name="faqCategory" value="¥æ©ö°İÃD"> ¥æ©ö°İÃD <span
 							class="glyphicon glyphicon-triangle-bottom pull-right"> </span>
 						</a>
 
 						<a class="list-group-item" data-parent="#menu" data-target="#sm5"
-							data-toggle="collapse" href="" name="faqCategory" value="å…¶ä»–å•é¡Œ"> å…¶ä»–å•é¡Œ <span
+							data-toggle="collapse" href="" name="faqCategory" value="¨ä¥L°İÃD"> ¨ä¥L°İÃD <span
 							class="glyphicon glyphicon-triangle-bottom pull-right"> </span>
 						</a>
 	
-<!-- å‚™ç”¨çš„å´é‚Šæ””   -->
+<!-- ³Æ¥Îªº°¼ÃäÄd   -->
 	<FORM METHOD="post" ACTION="<%=request.getContextPath()%>/back_end/faq/faq.do" >
-     <input type="submit" name="faqCategory" value="è¨»å†Šå•é¡Œ">
+     <input type="submit" name="faqCategory" value="µù¥U°İÃD">
      <input type="hidden" name="action" value="faq_for_user">
 	 </FORM>
 	
 	<FORM METHOD="post" ACTION="<%=request.getContextPath()%>/back_end/faq/faq.do" >
-     <input type="submit" name="faqCategory" value="ç™»å…¥å•é¡Œ">
+     <input type="submit" name="faqCategory" value="µn¤J°İÃD">
      <input type="hidden" name="action" value="faq_for_user">
 	 </FORM>
 	
 	<FORM METHOD="post" ACTION="<%=request.getContextPath()%>/back_end/faq/faq.do" >
-     <input type="submit" name="faqCategory" value="ç´„æœƒå•é¡Œ">
+     <input type="submit" name="faqCategory" value="¬ù·|°İÃD">
      <input type="hidden" name="action" value="faq_for_user">
 	 </FORM>
 	
 	<FORM METHOD="post" ACTION="<%=request.getContextPath()%>/back_end/faq/faq.do" >
-     <input type="submit" name="faqCategory" value="äº¤æ˜“å•é¡Œ">
+     <input type="submit" name="faqCategory" value="¥æ©ö°İÃD">
      <input type="hidden" name="action" value="faq_for_user">
 	 </FORM>
 	
 	<FORM METHOD="post" ACTION="<%=request.getContextPath()%>/back_end/faq/faq.do" >
-	<input type="submit" name="faqCategory" value="å…¶ä»–å•é¡Œ">
+	<input type="submit" name="faqCategory" value="¨ä¥L°İÃD">
 	<input type="hidden" name="action" value="faq_for_user">
 	</FORM>
 						
-<%-- 						<%=request.getContextPath()%>/back_end/faq/faq.do?faqCategory=å…¶ä»–å•é¡Œ&action=getRealtive_For_Category --%>
+<%-- 						<%=request.getContextPath()%>/back_end/faq/faq.do?faqCategory=¨ä¥L°İÃD&action=getRealtive_For_Category --%>
 						
 					</div>
 				</div>
@@ -202,26 +201,26 @@ input[type="submit"]{
  
 
 
-<!-- æŠŠä½ è¦æ”¾çš„å…§å®¹æ”¾åœ¨é€™=====================================================
+<!-- §â§A­n©ñªº¤º®e©ñ¦b³o=====================================================
 
-        ä¾‹å¦‚
+        ¨Ò¦p
         <div class="col-xs-12 col-sm-3">    1234</div>
         <div class="col-xs-12 col-sm-3">    1234</div>
         <div class="col-xs-12 col-sm-3">    1234</div>
         <div class="col-xs-12 col-sm-3">    1234</div>
 
 
-ä¸€å€‹å®Œæ•´çš„<div></div>ä»¥åŠéš”ç·š================================================ 
-ä½†è¦æ³¨æ„ä½ ä¸€é–‹å§‹æ˜¯ä¸æ˜¯æœ‰æŠŠçµå°¾çš„</div>æ”¾åœ¨footer.fileè£¡é¢-->
+¤@­Ó§¹¾ãªº<div></div>¥H¤Î¹j½u================================================ 
+¦ı­nª`·N§A¤@¶}©l¬O¤£¬O¦³§âµ²§Àªº</div>©ñ¦bfooter.file¸Ì­±-->
 
 
-<!-- å¹»ç‡ˆç‰‡é€™é€™ -->
+<!-- ¤Û¿O¤ù³o³o -->
 			<div class="col-xs-12 col-sm-12 ">
 				<div>
 					<div class="row">
 						<div class="col-sm-10 col-sm-offset-1">
 							<div class="carousel slide" data-ride="carousel" id="carousel-id">
-								<!-- å¹»ç‡ˆç‰‡å°åœ“é»å€ -->
+								<!-- ¤Û¿O¤ù¤p¶êÂI°Ï -->
 								<ol class="carousel-indicators">
 									<li class="" data-slide-to="0" data-target="#carousel-id">
 									</li>
@@ -238,15 +237,15 @@ input[type="submit"]{
 									<li class="active" data-slide-to="6" data-target="#carousel-id">
 									</li>
 								</ol>
-								<!-- å¹»ç‡ˆç‰‡ä¸»åœ–å€ -->
+								<!-- ¤Û¿O¤ù¥D¹Ï°Ï -->
 								<div class="carousel-inner">
 									<div class="item">
 										<img alt=""
 											src="<%= request.getContextPath() %>/front_end/images/pets_try3_resized.jpg">
 										<div class="container">
 											<div class="carousel-caption">
-												<h1>å•èˆ‡ç­”</h1>
-												<p>å…§æ–‡</p>
+												<h1>°İ»Pµª</h1>
+												<p>¤º¤å</p>
 												<p>
 													<a class="btn btn-lg btn-primary" href="#" role="button">
 														Sign up today </a>
@@ -261,10 +260,10 @@ input[type="submit"]{
 										<div class="container">
 											<div class="carousel-caption">
 												<h1>FAQ</h1>
-												<p>å…§æ–‡ï¼Ÿ</p>
+												<p>¤º¤å¡H</p>
 												<p>
 													<a class="btn btn-lg btn-primary" href="#" role="button">
-														æ›´å¤š </a>
+														§ó¦h </a>
 												</p>
 											</div>
 										</div>
@@ -275,11 +274,11 @@ input[type="submit"]{
 											src="<%= request.getContextPath() %>/front_end/images/pets_try3_resized.jpg">
 										<div class="container">
 											<div class="carousel-caption">
-												<h1>å•èˆ‡ç­”</h1>
-												<p>å…§æ–‡ï¼Ÿ</p>
+												<h1>°İ»Pµª</h1>
+												<p>¤º¤å¡H</p>
 												<p>
 													<a class="btn btn-lg btn-primary" href="#" role="button">
-														æ›´å¤š </a>
+														§ó¦h </a>
 												</p>
 											</div>
 										</div>
@@ -291,10 +290,10 @@ input[type="submit"]{
 										<div class="container">
 											<div class="carousel-caption">
 												<h1>FAQ</h1>
-												<p>å…§æ–‡ï¼Ÿ</p>
+												<p>¤º¤å¡H</p>
 												<p>
 													<a class="btn btn-lg btn-primary" href="#" role="button">
-														æ›´å¤š </a>
+														§ó¦h </a>
 												</p>
 											</div>
 										</div>
@@ -305,11 +304,11 @@ input[type="submit"]{
 											src="<%= request.getContextPath() %>/front_end/images/pets_try3_resized.jpg">
 										<div class="container">
 											<div class="carousel-caption">
-												<h1>å•èˆ‡ç­”</h1>
-												<p>å…§æ–‡ï¼Ÿ</p>
+												<h1>°İ»Pµª</h1>
+												<p>¤º¤å¡H</p>
 												<p>
 													<a class="btn btn-lg btn-primary" href="#" role="button">
-														æ›´å¤š </a>
+														§ó¦h </a>
 												</p>
 											</div>
 										</div>
@@ -321,17 +320,17 @@ input[type="submit"]{
 										<div class="container">
 											<div class="carousel-caption">
 												<h1>FAQ</h1>
-												<p>å…§æ–‡</p>
+												<p>¤º¤å</p>
 												<p>
 													<a class="btn btn-lg btn-primary" href="#" role="button">
-														è©³ç´°å…§å®¹ </a>
+														¸Ô²Ó¤º®e </a>
 												</p>
 											</div>
 										</div>
 										</img>
 									</div>
 								</div>
-								<!-- ä¸Šä¸‹é æ§åˆ¶å€ -->
+								<!-- ¤W¤U­¶±±¨î°Ï -->
 								<a class="left carousel-control" data-slide="prev"
 									href="#carousel-id"> <span
 									class="glyphicon glyphicon-chevron-left"> </span>
@@ -342,54 +341,52 @@ input[type="submit"]{
 							</div>
 						</div>
 					</div>
-					<!-- æœå°‹è¡¨å–® -->
-					<div>
-						
-						<form class="navbar-form navbar-right" role="search">
-							
-							<div class="form-group">
+					
+					<!-- ·j´Mªí³æ -->
+<!-- 					<div> -->
+<!-- 						<form class="navbar-form navbar-right" role="search"> -->
+<!-- 						<div class="form-group"> -->
 
+<!-- <!-- ¬d¸ß¥\¯à¦b³o --> -->
 
-<!-- æŸ¥è©¢åŠŸèƒ½åœ¨é€™ -->
-
-     <FORM METHOD="post" ACTION="<%=request.getContextPath()%>/back_end/faq/faq.do" >
-     <input type="text" name="faqCategory" placeholder="è«‹è¼¸å…¥æƒ³æŸ¥è©¢çš„é¡åˆ¥">
-     <button class="btn btn-success" type="submit">æœå°‹</button>
-     <input type="hidden" name="action" value="faq_for_user">
- 	 </FORM>
+<%--      <FORM METHOD="post" ACTION="<%=request.getContextPath()%>/back_end/faq/faq.do" > --%>
+<!--      <input type="text" name="faqCategory" placeholder="½Ğ¿é¤J·Q¬d¸ßªºÃş§O"> -->
+<!--      <button class="btn btn-success" type="submit">·j´M</button> -->
+<!--      <input type="hidden" name="action" value="faq_for_user"> -->
+<!--  	 </FORM> -->
      
-     <FORM METHOD="post" ACTION="<%=request.getContextPath()%>/back_end/faq/faq.do" >
-     <input type="text" name="faqTitle" placeholder="è«‹è¼¸å…¥æƒ³æŸ¥è©¢çš„æ¨™é¡Œ">
-     <button class="btn btn-success" type="submit">æœå°‹</button>
-     <input type="hidden" name="action" value="getRealtive_For_Title">
-     </FORM>
+<%--      <FORM METHOD="post" ACTION="<%=request.getContextPath()%>/back_end/faq/faq.do" > --%>
+<!--      <input type="text" name="faqTitle" placeholder="½Ğ¿é¤J·Q¬d¸ßªº¼ĞÃD"> -->
+<!--      <button class="btn btn-success" type="submit">·j´M</button> -->
+<!--      <input type="hidden" name="action" value="getRealtive_For_Title"> -->
+<!--      </FORM> -->
      
-     <FORM METHOD="post" ACTION="<%=request.getContextPath()%>/back_end/faq/faq.do" >
-     <input type="text" name="faqAnswer" placeholder="è«‹è¼¸å…¥æƒ³æŸ¥è©¢çš„ç­”æ¡ˆ">
-     <button class="btn btn-success" type="submit">æœå°‹</button>
-     <input type="hidden" name="action" value="getRealtive_For_Answer">
-	 </FORM>
+<%--      <FORM METHOD="post" ACTION="<%=request.getContextPath()%>/back_end/faq/faq.do" > --%>
+<!--      <input type="text" name="faqAnswer" placeholder="½Ğ¿é¤J·Q¬d¸ßªºµª®×"> -->
+<!--      <button class="btn btn-success" type="submit">·j´M</button> -->
+<!--      <input type="hidden" name="action" value="getRealtive_For_Answer"> -->
+<!-- 	 </FORM> -->
 
-							</div>
-						</form>
-					</div>
+<!-- 						</div> -->
+<!-- 						</form> -->
+<!-- 					</div> -->
 
-<!-- éºµåŒ…å±‘åœ¨é€™ -->
+<!-- ÄÑ¥]®h¦b³o -->
 					<div class="breadcrumb-container">
 						<div class="breadcrumb-row">
 							<ol class="breadcrumb">
-								<li><a href="<%=request.getContextPath() %>/front_end/index.html"> é¦–é  </a></li>
-								<li><a href="<%=request.getContextPath() %>/front_end/about_us/faq/faq_user.jsp"> å¸¸è¦‹å•é¡Œ </a></li>
+								<li><a href="<%=request.getContextPath() %>/front_end/index.html"> ­º­¶ </a></li>
+								<li><a href="<%=request.getContextPath() %>/front_end/about_us/faq/faq_user.jsp"> ±`¨£°İÃD </a></li>
 							</ol>
 						</div>
 					</div>
 					
 					
-					<!-- faqæ‘ºç–Šé¸å–® -->
+					<!-- faqºPÅ|¿ï³æ -->
 					
 					<div class="panel-group" id="accordion">						
 							<div class="panel-collapse collapse in" id="collapseOne">
-									<!-- faqé‡é»åœ¨é€™ -->
+									<!-- faq­«ÂI¦b³o -->
 							</div>
 					</div>
 						
@@ -409,56 +406,52 @@ input[type="submit"]{
 							<% count++;%>
 								</c:forEach>
 								
-							</div>
+						</div>
 							
-						
-						
-						<div class="panel panel-success">
-							<div class="panel-heading">
-								<h4 class="panel-title">
-									<a data-parent="#accordion" data-toggle="collapse"
-										href="#collapseTwo"> å•é¡Œåœ¨é€™é‚Šã€‚ç¬¬ 2 éƒ¨åˆ†--show æ–¹æ³• </a>
-								</h4>
-							</div>
-							<div class="panel-collapse collapse" id="collapseTwo">
-								<div class="panel-body">
-									<blockquote>
-											<p>é€™æ˜¯ã„§å€‹blockquote</p>
-											<cite class=""> å–®èº«ç‹—é—œå¿ƒæ‚¨ </cite>
-									</blockquote>
-									Nihil anim keffiyeh helvetica,
-									craft beer labore wes anderson cred nesciunt sapiente ea
-									proident. Ad vegan excepteur butcher vice lomo.</div>
-							</div>
-						</div>
-						<div class="panel panel-info">
-							<div class="panel-heading">
-								<h4 class="panel-title">
-									<a data-parent="#accordion" data-toggle="collapse"
-										href="#collapseThree"> å•é¡Œåœ¨é€™é‚Šã€‚ç¬¬ 3 éƒ¨åˆ†--toggle æ–¹æ³• </a>
-								</h4>
-							</div>
-							<div class="panel-collapse collapse" id="collapseThree">
-								<div class="panel-body">Nihil anim keffiyeh helvetica,
-									craft beer labore wes anderson cred nesciunt sapiente ea
-									proident. Ad vegan excepteur butcher vice lomo.</div>
-							</div>
-						</div>
-						<div class="panel panel-warning">
-							<div class="panel-heading">
-								<h4 class="panel-title">
-									<a data-parent="#accordion" data-toggle="collapse"
-										href="#collapseFour"> å•é¡Œåœ¨é€™é‚Šã€‚ç¬¬ 4 éƒ¨åˆ†--options æ–¹æ³• </a>
-								</h4>
-							</div>
-							<div class="panel-collapse collapse" id="collapseFour">
-								<div class="panel-body">Nihil anim keffiyeh helvetica,
-									craft beer labore wes anderson cred nesciunt sapiente ea
-									proident. Ad vegan excepteur butcher vice lomo.</div>
-							</div>
-						</div>
-					</div>
-					
+<!-- 						<div class="panel panel-success"> -->
+<!-- 							<div class="panel-heading"> -->
+<!-- 								<h4 class="panel-title"> -->
+<!-- 									<a data-parent="#accordion" data-toggle="collapse" -->
+<!-- 										href="#collapseTwo"> °İÃD¦b³oÃä¡C²Ä 2 ³¡¤À--show ¤èªk </a> -->
+<!-- 								</h4> -->
+<!-- 							</div> -->
+<!-- 							<div class="panel-collapse collapse" id="collapseTwo"> -->
+<!-- 								<div class="panel-body"> -->
+<!-- 									<blockquote> -->
+<!-- 											<p>³o¬O£¸­Óblockquote</p> -->
+<%-- 											<cite class=""> ³æ¨­ª¯Ãö¤ß±z </cite> --%>
+<!-- 									</blockquote> -->
+<!-- 									Nihil anim keffiyeh helvetica, -->
+<!-- 									craft beer labore wes anderson cred nesciunt sapiente ea -->
+<!-- 									proident. Ad vegan excepteur butcher vice lomo.</div> -->
+<!-- 							</div> -->
+<!-- 						</div> -->
+<!-- 						<div class="panel panel-info"> -->
+<!-- 							<div class="panel-heading"> -->
+<!-- 								<h4 class="panel-title"> -->
+<!-- 									<a data-parent="#accordion" data-toggle="collapse" -->
+<!-- 										href="#collapseThree"> °İÃD¦b³oÃä¡C²Ä 3 ³¡¤À--toggle ¤èªk </a> -->
+<!-- 								</h4> -->
+<!-- 							</div> -->
+<!-- 							<div class="panel-collapse collapse" id="collapseThree"> -->
+<!-- 								<div class="panel-body">Nihil anim keffiyeh helvetica, -->
+<!-- 									craft beer labore wes anderson cred nesciunt sapiente ea -->
+<!-- 									proident. Ad vegan excepteur butcher vice lomo.</div> -->
+<!-- 							</div> -->
+<!-- 						</div> -->
+<!-- 						<div class="panel panel-warning"> -->
+<!-- 							<div class="panel-heading"> -->
+<!-- 								<h4 class="panel-title"> -->
+<!-- 									<a data-parent="#accordion" data-toggle="collapse" -->
+<!-- 										href="#collapseFour"> °İÃD¦b³oÃä¡C²Ä 4 ³¡¤À--options ¤èªk </a> -->
+<!-- 								</h4> -->
+<!-- 							</div> -->
+<!-- 							<div class="panel-collapse collapse" id="collapseFour"> -->
+<!-- 								<div class="panel-body">Nihil anim keffiyeh helvetica, -->
+<!-- 									craft beer labore wes anderson cred nesciunt sapiente ea -->
+<!-- 									proident. Ad vegan excepteur butcher vice lomo.</div> -->
+<!-- 							</div> -->
+<!-- 						</div> -->
 					
 					<!--  <script type="text/javascript">
                     $(function() {
@@ -473,7 +466,7 @@ input[type="submit"]{
 					
 
 
-<!-- æš«æ™‚ç”¨ä¸åˆ° -->
+<!-- ¼È®É¥Î¤£¨ì -->
 <!--                 <div class="text-center"> -->
 <!--                     <ul class="pagination"> -->
 <!--                         <li><a href="#">&laquo;</a></li> -->
@@ -486,52 +479,52 @@ input[type="submit"]{
 <!--                     </ul> -->
 <!--                     <br> -->
 <!--                     <ul class="pager"> -->
-<!--                         <li><a href="#">å‰ä¸€é </a></li> -->
-<!--                         <li><a href="#">ä¸‹ä¸€é </a></li> -->
+<!--                         <li><a href="#">«e¤@­¶</a></li> -->
+<!--                         <li><a href="#">¤U¤@­¶</a></li> -->
 <!--                     </ul> -->
 <!--                 </div> -->
                 
                 
-                	<!-- é€™é‚Šæ˜¯user submit -->
+                	<!-- ³oÃä¬Ouser submit -->
 					<div class="container">
 						<div class="row">
 							<div class="col-md-12 col-md-12">
 								<div class="user-submit">
 									<h4>
-										ä»¥ä¸Šè§£ç­”æœ‰å¹«åŠ©åˆ°ä½ å—?
-										<input type="radio" name="radio" value="yes">æœ‰
-										<input type="radio" name="radio" value="no" onclick="alert('yeah~');">æ²’æœ‰<p>
+										¥H¤W¸Ñµª¦³À°§U¨ì§A¶Ü?
+										<input type="radio" name="radio" value="yes">¦³
+										<input type="radio" name="radio" value="no" onclick="alert('yeah~');">¨S¦³<p>
 									</h4>
 										
 									<div class="dropdown">
 										<h4>
-											å•é¡Œé¡åˆ¥ <select id="faq_category">
-												<option value="defaultValue">è«‹é¸æ“‡</option>
-												<option value="getRealtive_For_Category">è¨»å†Šå•é¡Œ</option>
-												<option value="getRealtive_For_Category">ç™»å…¥å•é¡Œ</option>
-												<option value="getRealtive_For_Category">ç´„æœƒå•é¡Œ</option>
-												<option value="getRealtive_For_Category">äº¤æ˜“å•é¡Œ</option>
-												<option value="getRealtive_For_Category">å…¶ä»–å•é¡Œ</option>
+											°İÃDÃş§O <select id="faq_category">
+												<option value="defaultValue">½Ğ¿ï¾Ü</option>
+												<option value="getRealtive_For_Category">µù¥U°İÃD</option>
+												<option value="getRealtive_For_Category">µn¤J°İÃD</option>
+												<option value="getRealtive_For_Category">¬ù·|°İÃD</option>
+												<option value="getRealtive_For_Category">¥æ©ö°İÃD</option>
+												<option value="getRealtive_For_Category">¨ä¥L°İÃD</option>
 											</select> 
-											ä¸»æ—¨<input type="text" id="user_submit_title" placeholder="ä½ çš„å•é¡Œæ˜¯?">
+											¥D¦®<input type="text" id="user_submit_title" placeholder="§Aªº°İÃD¬O?">
 										</h4>
 
 									</div>
-									<!-- placegolder æ¥­éšœé‡ -->
+									<!-- placegolder ·~»Ù­« -->
 									<textarea class="user_submit" id="user_submit"
-										placeholder="è«‹æè¿°ä¸€ä¸‹å•é¡Œå…§å®¹" onfocus="this.select()" required
+										placeholder="½Ğ´y­z¤@¤U°İÃD¤º®e" onfocus="this.select()" required
 										data-validation-required-message="Please enter a message.">
                                 	</textarea>
 									</div>
 								
 <!--								<div class="btn-group"> -->
-<!-- 									<a href="" class="btn btn-primary" role="button" onclick="safeSubmit" >ç¢ºèª</a> <a -->
-<!-- 										href="" class="btn btn-default" role="button">å–æ¶ˆ</a> -->
+<!-- 									<a href="" class="btn btn-primary" role="button" onclick="safeSubmit" >½T»{</a> <a -->
+<!-- 										href="" class="btn btn-default" role="button">¨ú®ø</a> -->
 <!-- 								</div> -->
 								
-								<!-- ç¢ºèªsubmit -->
-								<button type="button" class="btn btn-primary btn-mi" data-toggle="modal" data-target="#myModal">ç¢ºèª</button>
-								<!-- é€™é‚Šé€å‡ºè³‡æ–™ -->
+								<!-- ½T»{submit -->
+								<button type="button" class="btn btn-primary btn-mi" data-toggle="modal" data-target="#myModal">½T»{</button>
+								<!-- ³oÃä°e¥X¸ê®Æ -->
 								<input type="hidden" name="action" value="insert" >
 								
 								<!-- Modal -->
@@ -542,21 +535,21 @@ input[type="submit"]{
 								    <div class="modal-content">
 								      <div class="modal-header">
 								        <button type="button" class="close" data-dismiss="modal">&times;</button>
-								        <h4 class="modal-title">æ„Ÿè¬ä½ çš„æäº¤</h4>
+								        <h4 class="modal-title">·PÁÂ§Aªº´£¥æ</h4>
 								      </div>
 								      <div class="modal-body">
-								        <p>å•é¡Œå·²ç¶“é€å‡ºå›‰~</p>
+								        <p>°İÃD¤w¸g°e¥XÅo~</p>
 								      </div>
 								      <div class="modal-footer">
-								        <button type="button" class="btn btn-primary" data-dismiss="modal">é—œé–‰</button>
+								        <button type="button" class="btn btn-primary" data-dismiss="modal">Ãö³¬</button>
 								      </div>
 								    </div>
 								
 								  </div>
 								</div>
 								
-								<!-- å–æ¶ˆsubmit -->
-								<button type="button" class="btn btn-danger btn-mi" data-toggle="modal" data-target="#cancle-submit">å–æ¶ˆ</button>
+								<!-- ¨ú®øsubmit -->
+								<button type="button" class="btn btn-danger btn-mi" data-toggle="modal" data-target="#cancle-submit">¨ú®ø</button>
 								
 								<!-- Modal -->
 								<div id="cancle-submit" class="modal fade" role="dialog">
@@ -566,13 +559,13 @@ input[type="submit"]{
 								    <div class="modal-content">
 								      <div class="modal-header">
 								        <button type="button" class="close" data-dismiss="modal">&times;</button>
-								        <h4 class="modal-title">å–æ¶ˆæäº¤</h4>
+								        <h4 class="modal-title">¨ú®ø´£¥æ</h4>
 								      </div>
 								      <div class="modal-body">
-								        <p>ç¢ºèªæŒ‰ä¸‹å»å°±ä»€éº¼éƒ½æ²’æœ‰äº†å–”~</p>
+								        <p>½T»{«ö¤U¥h´N¤°»ò³£¨S¦³¤F³á~</p>
 								      </div>
 								      <div class="modal-footer">
-								        <button type="button" class="btn btn-danger" data-dismiss="modal">ç¢ºå®š</button>
+								        <button type="button" class="btn btn-danger" data-dismiss="modal">½T©w</button>
 								      </div>
 								    </div>
 								
@@ -580,7 +573,7 @@ input[type="submit"]{
 								</div>
 								
 								
-								<!-- ä¸‹é¢æ¸¬è©¦ç”¨ -->
+								<!-- ¤U­±´ú¸Õ¥Î -->
 								<!-- <script>
                                 function getValue() {
                                     var content = document.getElementById("user_submit").value;
@@ -588,7 +581,7 @@ input[type="submit"]{
                                 }
                                 </script> -->
 								<!-- 
-                                ç”¨ JavaScript æŠ“ <textarea> ç›®å‰å…§éƒ¨ç¾æœ‰å€¼è«‹ç”¨ value ï¼ŒæŠ“ä¸€é–‹å§‹åˆå§‹é è¨­å€¼è«‹ç”¨ defaultValue ï¼Œå°±æ˜¯ä¸è¦ç”¨ innerHTML ã€‚å› ç‚º <textarea> innerHTML åœ¨ IE æ˜¯ç›®å‰å…§éƒ¨ç¾æœ‰å€¼ï¼Œåœ¨ Firefox ã€ Chrome æ˜¯åˆå§‹é è¨­å€¼ã€‚
+                                ¥Î JavaScript §ì <textarea> ¥Ø«e¤º³¡²{¦³­È½Ğ¥Î value ¡A§ì¤@¶}©lªì©l¹w³]­È½Ğ¥Î defaultValue ¡A´N¬O¤£­n¥Î innerHTML ¡C¦]¬° <textarea> innerHTML ¦b IE ¬O¥Ø«e¤º³¡²{¦³­È¡A¦b Firefox ¡B Chrome ¬Oªì©l¹w³]­È¡C
                                  <script>
                                 var content = document.getElementById('user_submit');
                                 </script>
@@ -596,7 +589,7 @@ input[type="submit"]{
                                 <input type="button" value="defaultValue" onclick="alert(content.defaultValue)">
                                 <input type="button" value="innerHTML" onclick="alert(content.innerHTML)">
                                  -->
-								<!-- æ¸¬è©¦åˆ°é€™ -->
+								<!-- ´ú¸Õ¨ì³o -->
 
 							</div>
 						</div>
@@ -608,10 +601,10 @@ input[type="submit"]{
                         <div class="row">
                             <div class="col-sm-12">
                                 <div class="col-sm-3">
-                                    <p>Copyright å¯µç‰©You&amp;Me 2017</p>
+                                    <p>Copyright Ãdª«You&amp;Me 2017</p>
                                 </div>
                                 <div class="col-sm-3">
-                                    <p>é—œæ–¼æˆ‘å€‘</p>
+                                    <p>Ãö©ó§Ú­Ì</p>
                                 </div>
                             </div>
                         </div>
@@ -620,7 +613,7 @@ input[type="submit"]{
                 <a href="#">
                     <div class="" id="fixedbutton-talk">
                         <button class="button btn-lg btn-primary active">
-                            äº¤æ˜“èŠå¤©å®¤
+                            ¥æ©ö²á¤Ñ«Ç
                         </button>
                     </div>
                 </a>

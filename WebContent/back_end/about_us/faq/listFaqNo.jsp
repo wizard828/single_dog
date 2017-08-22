@@ -6,7 +6,9 @@
 <%-- 此頁練習採用 Script 的寫法取值 --%>
 <%-- 取出 Concroller EmpServlet.java已存入request的EmpVO物件--%>
 <%-- 取出 對應的DeptVO物件--%>
-
+<% Faq faq=(Faq)request.getAttribute("faq");
+	pageContext.setAttribute("faq",faq);
+%>
 <html>
 <head>
 <title>常見問題查詢 - listFaqNo.jsp</title>

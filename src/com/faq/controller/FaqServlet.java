@@ -27,7 +27,7 @@ public class FaqServlet extends HttpServlet {
 	public void doPost(HttpServletRequest req, HttpServletResponse res)
 			throws ServletException, IOException {
 
-		req.setCharacterEncoding("BIG5");
+		req.setCharacterEncoding("UTF-8");
 		String action = req.getParameter("action");
 		HttpSession session=req.getSession();
 		Emp emp=(Emp)session.getAttribute("emp");
@@ -40,6 +40,7 @@ public class FaqServlet extends HttpServlet {
 			// Store this set in the request scope, in case we need to
 			// send the ErrorPage view.
 			req.setAttribute("errorMsgs", errorMsgs);
+			
 
 			try {
 				/***************************1.接收請求參數 - 輸入格式的錯誤處理**********************/
@@ -163,7 +164,6 @@ public class FaqServlet extends HttpServlet {
 
 				/***************************1.接收請求參數 - 輸入格式的錯誤處理**********************/
 				String faqCategory = req.getParameter("faqCategory");
-				
 				System.out.println(faqCategory);
 				/***************************2.開始查詢資料*****************************************/
 				FaqService faqService = new FaqService();
@@ -357,24 +357,25 @@ public class FaqServlet extends HttpServlet {
 			FaqService faqService = new FaqService();
 			Faq updateByPk = faqService.findByPrimaryKey(faqNo);
 			req.setAttribute("faqUpdate", updateByPk);
-			RequestDispatcher update = req.getRequestDispatcher("/back_end/about_us/faq/faq_News.jsp");
+			RequestDispatcher update = req.getRequestDispatcher("/back_end/about_us/faq/update_Faq.jsp");
 			update.forward(req, res);
 		}
 			
 //		update success
 		if("updateSuccess".equals(action)){
 			Integer faqNo = new Integer(req.getParameter("faqNo"));
-			Integer empNo = new Integer(req.getParameter("empNo"));
+			Integer empNo = emp.getEmpNo();
 			String faqCategory = new String(req.getParameter("faqCategory"));
 			String faqTitle = new String(req.getParameter("faqTitle"));
-			String faqContent = new String(req.getParameter("faqContent"));
-			
+			String faqAnswer = new String(req.getParameter("faqAnswer"));
 			FaqService faqService = new FaqService();
-			faqService.update(faqNo, empNo, faqCategory, faqTitle, faqContent);
+			faqService.update(faqNo, empNo, faqCategory, faqTitle, faqAnswer);
 			
 //			req.setAttribute("list", safeUpdate);
-			RequestDispatcher backToList = req.getRequestDispatcher("/back_end/about_us/news/listAllNews.jsp");
-			backToList.forward(req, res);
+//			RequestDispatcher backToList = req.getRequestDispatcher("/back_end/about_us/faq/listAllFaq.jsp");
+//			
+//			backToList.forward(req, res);
+			res.sendRedirect(req.getContextPath()+"/back_end/about_us/faq/listAllFaq.jsp");
 		}
 
 //		if ("update".equals(action)) { // 來自update_emp_input.jsp的請求
@@ -457,6 +458,7 @@ public class FaqServlet extends HttpServlet {
 				if(faqCategory.isEmpty()){
 					errorMsgs.add("請填入標題");
 				}
+				System.out.println(faqCategory);
 				
 				String faqTitle = req.getParameter("faqTitle").trim();
 				if(faqTitle.isEmpty()){
@@ -473,7 +475,7 @@ public class FaqServlet extends HttpServlet {
 				faq.setFaqCategory(faqCategory);
 				faq.setFaqTitle(faqTitle);
 				faq.setFaqAnswer(faqAnswer);
-
+				System.out.println("iiiida");
 				// Send the use back to the form, if there were errors
 				if (!errorMsgs.isEmpty()) {
 					req.setAttribute("faq", faq); // 含有輸入格式錯誤的empVO物件,也存入req
@@ -486,6 +488,7 @@ public class FaqServlet extends HttpServlet {
 				/***************************2.開始新增資料***************************************/
 				FaqService faqService = new FaqService();
 				faq = faqService.insert( empNo, faqCategory, faqTitle, faqAnswer);
+				System.out.println("asda");
 				
 				/***************************3.新增完成,準備轉交(Send the Success view)***********/
 				
@@ -495,6 +498,7 @@ public class FaqServlet extends HttpServlet {
 				
 				/***************************其他可能的錯誤處理**********************************/
 			} catch (Exception e) {
+				System.out.println("dqwdqw");
 				errorMsgs.add(e.getMessage());
 				RequestDispatcher failureView = req
 						.getRequestDispatcher("/back_end/about_us/faq/addFaq.jsp");

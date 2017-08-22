@@ -29,13 +29,13 @@ public class FaqDAO implements FaqDAO_Interface{
 	    private static final String INSERT_STMT = "INSERT INTO Faq(faqNO, empNo, faqCategory, faqTitle, faqAnswer)"
 	            + " VALUES(faq_SQ.NEXTVAL,?,?,?,?)";
 	    private static final String UPDATE_STMT = "UPDATE Faq SET empNO = ?, faqCategory = ?, faqTitle = ?, faqAnswer = ?"
-	            + "faqNo = ?, faqCategory = ?, faqTitle = ?, faqAnswer = ? WHERE faqNO = ?";
+	            + " where faqNO = ?";
 	    private static final String DELETE_STMT = "DELETE FROM Faq WHERE faqNO = ?";
 	    private static final String FIND_BY_PK = "SELECT * FROM Faq WHERE faqNO = ?";
-	    private static final String FIND_BY_CATEGORY = "SELECT * FROM Faq WHERE faqCategory Like ?";
-	    private static final String FIND_BY_TITLE = "SELECT * FROM Faq WHERE faqTitle Like ?";
-	    private static final String FIND_BY_ANSWER = "SELECT * FROM Faq WHERE faqAnswer Like ?";
-	    private static final String GET_ALL = "SELECT * FROM Faq";
+	    private static final String FIND_BY_CATEGORY = "SELECT * FROM Faq WHERE faqCategory Like ? order by faqNo";
+	    private static final String FIND_BY_TITLE = "SELECT * FROM Faq WHERE faqTitle Like ? order by faqNo";
+	    private static final String FIND_BY_ANSWER = "SELECT * FROM Faq WHERE faqAnswer Like ? order by faqNo";
+	    private static final String GET_ALL = "SELECT * FROM Faq order by faqNo";
 	    
 	    @Override
 	    public void insert(Faq faq) {

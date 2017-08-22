@@ -1,25 +1,45 @@
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="Big5"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@ page import="com.news.model.*"%>
+<%@ page import="java.util.*"%>
+<%@ page import="com.emp.model.*"%>
+<%@ page import="com.faq.model.*"%>
+
 <%
-	News news = (News) request.getAttribute("newsUpdate"); //EmpServlet.java (Controller), 存入req的empVO物件 (包括幫忙取出的empVO, 也包括輸入資料錯誤時的empVO物件)
+	Faq faq = (Faq) request.getAttribute("faqUpdate"); //EmpServlet.java (Controller), 存入req的empVO物件 (包括幫忙取出的empVO, 也包括輸入資料錯誤時的empVO物件)
 %>
+
 <html>
 <head>
-<title>最新消息修改 - update_News.jsp</title></head>
+<%@ include file="faqHeader.file"%>
+<title>最新消息修改 - update_Faq.jsp</title>
+</head>
+
 <link rel="stylesheet" type="text/css" href="js/calendar.css">
 <script language="JavaScript" src="js/calendarcode.js"></script>
 <div id="popupcalendar" class="text"></div>
 
-<body bgcolor='white'>
+<body>
 
-<table border='1' cellpadding='5' cellspacing='0' width='400'>
-	<tr bgcolor='#CCCCFF' align='center' valign='middle' height='20'>
-		<td>
-		<h3>最新消息修改 - update_News.jsp</h3>
-		<a href="<%=request.getContextPath()%>/back_end/about_us/faq/faq_select_page.jsp"><img src="" width="" height="" border="">回首頁</a></td>
-	</tr>
-</table>
+<%@ include file="/back_end/backEndNavBar.file"%>
+
+	<div class="container-fluid">
+		<div class="row">
+
+			<%@ include file="/back_end/backEndLSide.file"%>
+
+			<div class="col-xs-12 col-sm-8">
+
+
+				<h5 class="page-header text-right">目前位置:後端首頁</h5>
+
+
+				<div class="row">
+
+					<div class="panel panel-info">
+
+						<div class="panel-heading">
+							<h3 class="panel-title">${emp.empName}</h3>
+						</div>
 
 <h3>最新消息修改/刪除:</h3>
 <!-- 錯誤表列   -->
@@ -33,35 +53,26 @@
 	</font>
 </c:if>
 
-<FORM METHOD="post" ACTION="<%=request.getContextPath()%>/back_end/news/news.do" name="form1">
+<FORM METHOD="post" ACTION="<%=request.getContextPath()%>/back_end/faq/faq.do" name="form1">
 <table border="0">
 	<tr>
-		<td>最新消息編號:<font color=red><b>*</b></font></td>
-		<td><input type="hidden" name="newsNo" value="<%=news.getNewsNo()%>">
-		<%=news.getNewsNo()%>
+		<td>常見問題編號:<font color=red><b>*</b></font></td>
+		<td><input type="hidden" name="faqNo" value="${faqUpdate.faqNo}">
+		${faqUpdate.faqNo}
 		</td>
 	</tr>
 	<tr>
-		<td>員工編號:</td>
-		<td><input type="hidden" name="empNo" value="<%=news.getEmpNo()%>">
-		<%=news.getEmpNo()%>
+		<td>常見問題類別:</td>
+		<td><input type="text" name="faqCategory" value="<%=faq.getFaqCategory() %>" required>
 		</td>
 	</tr>
 	<tr>
-		<td>最新消息標題:</td>
-		<td><input type="TEXT" name="newsTitle" size="30"	value="<%=news.getNewsTitle()%>" /></td>
+		<td>常見問題標題:</td>
+		<td><input type="TEXT" name="faqTitle" size="30"	value="<%=faq.getFaqTitle() %>" required></td>
 	</tr>
 		<tr>
-		<td>最新消息內容:</td>
-		<td><input type="TEXT" name="newsContent" size="45"	value="<%=news.getNewsContent()%>" /></td>
-	</tr>
-	
-	<tr>
-		<td>發佈（更新）日期:</td>
-		<td><input type="hidden" name="newsDate" value="<%=news.getNewsDate()%>">
-		<%=news.getNewsDate()%>
-		</td>
-		    
+		<td>常見問題解答:</td>
+		<td><input type="TEXT" name="faqAnswer" size="45"	value="<%=faq.getFaqAnswer() %>" required></td>
 	</tr>
 
 </table>
@@ -71,8 +82,5 @@
 <input type="hidden" name="whichPage" value="<%=request.getParameter("whichPage")%>">  <!--只用於:listAllEmp.jsp-->
 <input type="submit" value="送出修改"></FORM>
 
-<br>送出修改的來源網頁路徑:<br><b>
-   <font color=blue>request.getParameter("requestURL"):</font> <%= request.getParameter("requestURL")%><br>
-   <font color=blue>request.getParameter("whichPage"):</font> <%= request.getParameter("whichPage")%> (此範例目前只用於:istAllEmp.jsp))</b>
 </body>
 </html>

@@ -31,7 +31,7 @@ public class FaqService {
 		faq.setFaqCategory(faqCategory);
 		faq.setFaqTitle(faqTitle);
 		faq.setFaqAnswer(faqAnswer);
-		
+		dao.update(faq);
 		return faq;
 	}
 	

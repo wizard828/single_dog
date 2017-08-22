@@ -24,16 +24,6 @@
 </head>
 <body>
 
-
-
-
-
-
-
-
-
-
-
 	<%@ include file="/back_end/backEndNavBar.file"%>
 
 	<div class="container-fluid">
@@ -59,11 +49,6 @@
 
 
 							<div class="row">
-
-
-
-
-
 
 <%-- ¿ù»~ªí¦C --%>
 <c:if test="${not empty errorMsgs}">
@@ -122,14 +107,6 @@
 	</c:forEach>
 </table>
 <%@ include file="pages/page2.file" %>
-
-
-
-
-
-
-
-
 
 							</div>
 						</div>

@@ -1,5 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="BIG5"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="BIG5"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ page import="com.faq.model.*"%>
@@ -67,7 +66,7 @@ input[type="submit"]{
 	margin-left: 1em;
 }
 
-#user_submit {
+.user_submit {
 	resize: none;
 	width: 100%;
 	height: 100px;
@@ -486,73 +485,75 @@ input[type="submit"]{
                 
                 
                 	<!-- 這邊是user submit -->
-					<div class="container">
-						<div class="row">
-							<div class="col-md-12 col-md-12">
-								<div class="user-submit">
-									<h4>
-										以上解答有幫助到你嗎?
-										<input type="radio" name="radio" value="yes">有
-										<input type="radio" name="radio" value="no" onclick="alert('yeah~');">沒有<p>
-									</h4>
+<%--                 	<form action="<%=request.getContextPath() %>/back_end/faq/faq.do" method="post"> --%>
+<!-- 					<div class="container"> -->
+<!-- 						<div class="row"> -->
+<!-- 							<div class="col-md-12 col-md-12"> -->
+<!-- 								<div class="user-submit"> -->
+<!-- 									<h4> -->
+<!-- 										以上解答有幫助到你嗎? -->
+<!-- 										<input type="radio" name="radio" value="yes">有 -->
+<!-- 										<input type="hidden" name="action" value="user_insert" > -->
+<!-- 										<input type="radio" name="radio" value="no" onclick="alert('yeah~');">沒有<p> -->
+<!-- 									</h4> -->
 										
-									<div class="dropdown">
-										<h4>
-											問題類別 <select id="faq_category">
-												<option value="defaultValue">請選擇</option>
-												<option value="getRealtive_For_Category">註冊問題</option>
-												<option value="getRealtive_For_Category">登入問題</option>
-												<option value="getRealtive_For_Category">約會問題</option>
-												<option value="getRealtive_For_Category">交易問題</option>
-												<option value="getRealtive_For_Category">其他問題</option>
-											</select> 
-											主旨<input type="text" id="user_submit_title" placeholder="你的問題是?">
-										</h4>
+<!-- 									<div class="dropdown"> -->
+<!-- 										<h4> -->
+<!-- 											問題類別 <select name="faqCategory"> -->
+<!-- 												<option value="defaultValue">請選擇</option> -->
+<!-- 												<option value="getRealtive_For_Category">註冊問題</option> -->
+<!-- 												<option value="getRealtive_For_Category">登入問題</option> -->
+<!-- 												<option value="getRealtive_For_Category">約會問題</option> -->
+<!-- 												<option value="getRealtive_For_Category">交易問題</option> -->
+<!-- 												<option value="getRealtive_For_Category">其他問題</option> -->
+<!-- 											</select>  -->
+<!-- 											主旨<input type="text" name="faqTitle" placeholder="你的問題是?"> -->
+<!-- 										</h4> -->
 
-									</div>
-									<!-- placegolder 業障重 -->
-									<textarea class="user_submit" id="user_submit"
-										placeholder="請描述一下問題內容" onfocus="this.select()" required
-										data-validation-required-message="Please enter a message.">
-                                	</textarea>
-									</div>
+<!-- 									</div> -->
+<!-- 									placegolder 業障重 -->
+<!-- 									<textarea class="user_submit" name="faqAnswer" placeholder="請描述一下問題內容" onfocus="this.select()" required -->
+<!-- 										data-validation-required-message="Please enter a message."> -->
+<!--                                 	</textarea> -->
+<!-- 									</div> -->
 								
-<!--								<div class="btn-group"> -->
-<!-- 									<a href="" class="btn btn-primary" role="button" onclick="safeSubmit" >確認</a> <a -->
-<!-- 										href="" class="btn btn-default" role="button">取消</a> -->
+<!-- <!--								<div class="btn-group"> --> -->
+<!-- <!-- 									<a href="" class="btn btn-primary" role="button" onclick="safeSubmit" >確認</a> <a --> -->
+<!-- <!-- 										href="" class="btn btn-default" role="button">取消</a> --> -->
+<!-- <!-- 								</div> --> -->
+								
+<!-- 								確認submit -->
+<!-- 								<button type="submit" class="btn btn-primary btn-mi" data-toggle="modal" data-target="#myModal">確認</button> -->
+<!-- 								這邊送出資料 -->
+<!-- 								<input type="hidden" name="action" value="user_insert" > -->
+								
+<!-- 								Modal -->
+<!-- 								<div id="myModal" class="modal fade" role="dialog"> -->
+<!-- 								  <div class="modal-dialog"> -->
+								
+<!-- 								    Modal content -->
+<!-- 								    <div class="modal-content"> -->
+<!-- 								      <div class="modal-header"> -->
+<!-- 								        <button type="button" class="close" data-dismiss="modal">&times;</button> -->
+<!-- 								        <h4 class="modal-title">感謝你的提交</h4> -->
+<!-- 								      </div> -->
+<!-- 								      <div class="modal-body"> -->
+<!-- 								        <p>問題已經送出囉~</p> -->
+<!-- 								      </div> -->
+<!-- 								      <div class="modal-footer"> -->
+<!-- 								        <button type="button" class="btn btn-primary" data-dismiss="modal">關閉</button> -->
+<!-- 								      </div> -->
+<!-- 								    </div> -->
+								
+<!-- 								  </div> -->
 <!-- 								</div> -->
+<!-- 								</form> -->
 								
-								<!-- 確認submit -->
-								<button type="button" class="btn btn-primary btn-mi" data-toggle="modal" data-target="#myModal">確認</button>
-								<!-- 這邊送出資料 -->
-								<input type="hidden" name="action" value="insert" >
+<!-- 								取消submit -->
+<!-- 								<button type="button" class="btn btn-danger btn-mi" data-toggle="modal" data-target="#cancle-submit">取消</button> -->
 								
-								<!-- Modal -->
-								<div id="myModal" class="modal fade" role="dialog">
-								  <div class="modal-dialog">
-								
-								    <!-- Modal content-->
-								    <div class="modal-content">
-								      <div class="modal-header">
-								        <button type="button" class="close" data-dismiss="modal">&times;</button>
-								        <h4 class="modal-title">感謝你的提交</h4>
-								      </div>
-								      <div class="modal-body">
-								        <p>問題已經送出囉~</p>
-								      </div>
-								      <div class="modal-footer">
-								        <button type="button" class="btn btn-primary" data-dismiss="modal">關閉</button>
-								      </div>
-								    </div>
-								
-								  </div>
-								</div>
-								
-								<!-- 取消submit -->
-								<button type="button" class="btn btn-danger btn-mi" data-toggle="modal" data-target="#cancle-submit">取消</button>
-								
-								<!-- Modal -->
-								<div id="cancle-submit" class="modal fade" role="dialog">
+<!-- 								Modal -->
+<!-- 								<div id="cancle-submit" class="modal fade" role="dialog"> -->
 								  <div class="modal-dialog">
 								
 								    <!-- Modal content-->

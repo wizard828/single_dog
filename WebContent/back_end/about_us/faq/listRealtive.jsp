@@ -7,7 +7,8 @@
 
 <%
 	FaqService faqService = new FaqService();
-	List<Faq> list = faqService.getAll();
+	//List<Faq> list = faqService.findByAnswer();
+	List<Faq> list = (List<Faq>)request.getAttribute("faqList");
 	pageContext.setAttribute("faqList",list);
 %>
 

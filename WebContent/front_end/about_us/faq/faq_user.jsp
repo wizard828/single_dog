@@ -6,8 +6,6 @@
 <!DOCTYPE html>
 <html lang="">
 
-
-
 <head>
 
     <meta charset="UTF-8">
@@ -75,8 +73,6 @@ input[type="submit"]{
 
 </style>
 
-
-
 </head>
 
 <body>
@@ -137,31 +133,31 @@ input[type="submit"]{
              <div class="frontend"><img src="<%= request.getContextPath() %>/front_end/images/logo-sp.png" class="img-rounded img-bg try-color">
              </div>
                 <div id="menu" data-spy="affix" data-offset-top="200">
-					<div class="panel list-group list-color">
-						<a class="list-group-item" data-parent="#menu" data-target="#sm1"
-							data-toggle="collapse" href="" name="faqCategory" value="註冊問題" > 註冊問題 <span
-							class="glyphicon glyphicon-triangle-bottom pull-right"> </span>
-						</a>
+<!-- 					<div class="panel list-group list-color"> -->
+<!-- 						<a class="list-group-item" data-parent="#menu" data-target="#sm1" -->
+<!-- 							data-toggle="collapse" href="" name="faqCategory" value="註冊問題" > 註冊問題 <span -->
+<!-- 							class="glyphicon glyphicon-triangle-bottom pull-right"> </span> -->
+<!-- 						</a> -->
 						
-						<a class="list-group-item" data-parent="#menu" data-target="#sm2"
-							data-toggle="collapse" href="" name="faqCategory" value="登入問題"> 登入問題 <span
-							class="glyphicon glyphicon-triangle-bottom pull-right"> </span>
-						</a>
+<!-- 						<a class="list-group-item" data-parent="#menu" data-target="#sm2" -->
+<!-- 							data-toggle="collapse" href="" name="faqCategory" value="登入問題"> 登入問題 <span -->
+<!-- 							class="glyphicon glyphicon-triangle-bottom pull-right"> </span> -->
+<!-- 						</a> -->
 
-						<a class="list-group-item" data-parent="#menu" data-target="#sm3"
-							data-toggle="collapse" href="" name="faqCategory" value="約會問題"> 約會問題 <span
-							class="glyphicon glyphicon-triangle-bottom pull-right"> </span>
-						</a>
+<!-- 						<a class="list-group-item" data-parent="#menu" data-target="#sm3" -->
+<!-- 							data-toggle="collapse" href="" name="faqCategory" value="約會問題"> 約會問題 <span -->
+<!-- 							class="glyphicon glyphicon-triangle-bottom pull-right"> </span> -->
+<!-- 						</a> -->
 
-						<a class="list-group-item" data-parent="#menu" data-target="#sm4"
-							data-toggle="collapse" href="" name="faqCategory" value="交易問題"> 交易問題 <span
-							class="glyphicon glyphicon-triangle-bottom pull-right"> </span>
-						</a>
+<!-- 						<a class="list-group-item" data-parent="#menu" data-target="#sm4" -->
+<!-- 							data-toggle="collapse" href="" name="faqCategory" value="交易問題"> 交易問題 <span -->
+<!-- 							class="glyphicon glyphicon-triangle-bottom pull-right"> </span> -->
+<!-- 						</a> -->
 
-						<a class="list-group-item" data-parent="#menu" data-target="#sm5"
-							data-toggle="collapse" href="" name="faqCategory" value="其他問題"> 其他問題 <span
-							class="glyphicon glyphicon-triangle-bottom pull-right"> </span>
-						</a>
+<!-- 						<a class="list-group-item" data-parent="#menu" data-target="#sm5" -->
+<!-- 							data-toggle="collapse" href="" name="faqCategory" value="其他問題"> 其他問題 <span -->
+<!-- 							class="glyphicon glyphicon-triangle-bottom pull-right"> </span> -->
+<!-- 						</a> -->
 	
 <!-- 備用的側邊攔   -->
 	<FORM METHOD="post" ACTION="<%=request.getContextPath()%>/back_end/faq/faq.do" >
@@ -191,13 +187,12 @@ input[type="submit"]{
 						
 <%-- 						<%=request.getContextPath()%>/back_end/faq/faq.do?faqCategory=其他問題&action=getRealtive_For_Category --%>
 						
-					</div>
+<!-- 					</div> -->
 				</div>
 			</div>
 
             <div class="col-xs-12 col-sm-10">
                 <div class="row">
- 
 
 
 <!-- 把你要放的內容放在這=====================================================
@@ -210,10 +205,12 @@ input[type="submit"]{
 
 
 一個完整的<div></div>以及隔線================================================ 
-但要注意你一開始是不是有把結尾的</div>放在footer.file裡面-->
+但要注意你一開始是不是有把結尾的</div>放在footer.file裡面
+
+-->
 
 
-<!-- 幻燈片這這 -->
+<!-- 幻燈片這這 --!>
 			<div class="col-xs-12 col-sm-12 ">
 				<div>
 					<div class="row">
@@ -244,11 +241,6 @@ input[type="submit"]{
 										<div class="container">
 											<div class="carousel-caption">
 												<h1>問與答</h1>
-												<p>內文</p>
-												<p>
-													<a class="btn btn-lg btn-primary" href="#" role="button">
-														Sign up today </a>
-												</p>
 											</div>
 										</div>
 										</img>
@@ -259,11 +251,6 @@ input[type="submit"]{
 										<div class="container">
 											<div class="carousel-caption">
 												<h1>FAQ</h1>
-												<p>內文？</p>
-												<p>
-													<a class="btn btn-lg btn-primary" href="#" role="button">
-														更多 </a>
-												</p>
 											</div>
 										</div>
 										</img>
@@ -274,11 +261,6 @@ input[type="submit"]{
 										<div class="container">
 											<div class="carousel-caption">
 												<h1>問與答</h1>
-												<p>內文？</p>
-												<p>
-													<a class="btn btn-lg btn-primary" href="#" role="button">
-														更多 </a>
-												</p>
 											</div>
 										</div>
 										</img>
@@ -289,11 +271,6 @@ input[type="submit"]{
 										<div class="container">
 											<div class="carousel-caption">
 												<h1>FAQ</h1>
-												<p>內文？</p>
-												<p>
-													<a class="btn btn-lg btn-primary" href="#" role="button">
-														更多 </a>
-												</p>
 											</div>
 										</div>
 										</img>
@@ -304,11 +281,6 @@ input[type="submit"]{
 										<div class="container">
 											<div class="carousel-caption">
 												<h1>問與答</h1>
-												<p>內文？</p>
-												<p>
-													<a class="btn btn-lg btn-primary" href="#" role="button">
-														更多 </a>
-												</p>
 											</div>
 										</div>
 										</img>
@@ -319,11 +291,6 @@ input[type="submit"]{
 										<div class="container">
 											<div class="carousel-caption">
 												<h1>FAQ</h1>
-												<p>內文</p>
-												<p>
-													<a class="btn btn-lg btn-primary" href="#" role="button">
-														詳細內容 </a>
-												</p>
 											</div>
 										</div>
 										</img>
@@ -346,7 +313,7 @@ input[type="submit"]{
 <!-- 						<form class="navbar-form navbar-right" role="search"> -->
 <!-- 						<div class="form-group"> -->
 
-<!-- <!-- 查詢功能在這 --> -->
+<!-- 查詢功能在這 -->
 
 <%--      <FORM METHOD="post" ACTION="<%=request.getContextPath()%>/back_end/faq/faq.do" > --%>
 <!--      <input type="text" name="faqCategory" placeholder="請輸入想查詢的類別"> -->
@@ -465,7 +432,7 @@ input[type="submit"]{
 					
 
 
-<!-- 暫時用不到 -->
+<!-- 頁碼暫時用不到 -->
 <!--                 <div class="text-center"> -->
 <!--                     <ul class="pagination"> -->
 <!--                         <li><a href="#">&laquo;</a></li> -->
@@ -517,10 +484,10 @@ input[type="submit"]{
 <!--                                 	</textarea> -->
 <!-- 									</div> -->
 								
-<!-- <!--								<div class="btn-group"> --> -->
-<!-- <!-- 									<a href="" class="btn btn-primary" role="button" onclick="safeSubmit" >確認</a> <a --> -->
-<!-- <!-- 										href="" class="btn btn-default" role="button">取消</a> --> -->
-<!-- <!-- 								</div> --> -->
+<!--								<div class="btn-group"> -->
+<!-- 									<a href="" class="btn btn-primary" role="button" onclick="safeSubmit" >確認</a> <a -->
+<!-- 										href="" class="btn btn-default" role="button">取消</a> -->
+<!-- 								</div> -->
 								
 <!-- 								確認submit -->
 <!-- 								<button type="submit" class="btn btn-primary btn-mi" data-toggle="modal" data-target="#myModal">確認</button> -->
@@ -557,68 +524,36 @@ input[type="submit"]{
 								  <div class="modal-dialog">
 								
 								    <!-- Modal content-->
-								    <div class="modal-content">
-								      <div class="modal-header">
-								        <button type="button" class="close" data-dismiss="modal">&times;</button>
-								        <h4 class="modal-title">取消提交</h4>
-								      </div>
-								      <div class="modal-body">
-								        <p>確認按下去就什麼都沒有了喔~</p>
-								      </div>
-								      <div class="modal-footer">
-								        <button type="button" class="btn btn-danger" data-dismiss="modal">確定</button>
-								      </div>
-								    </div>
+<!-- 								    <div class="modal-content"> -->
+<!-- 								      <div class="modal-header"> -->
+<!-- 								        <button type="button" class="close" data-dismiss="modal">&times;</button> -->
+<!-- 								        <h4 class="modal-title">取消提交</h4> -->
+<!-- 								      </div> -->
+<!-- 								      <div class="modal-body"> -->
+<!-- 								        <p>確認按下去就什麼都沒有了喔~</p> -->
+<!-- 								      </div> -->
+<!-- 								      <div class="modal-footer"> -->
+<!-- 								        <button type="button" class="btn btn-danger" data-dismiss="modal">確定</button> -->
+<!-- 								      </div> -->
+<!-- 								    </div> -->
 								
-								  </div>
-								</div>
-								
-								
-								<!-- 下面測試用 -->
-								<!-- <script>
-                                function getValue() {
-                                    var content = document.getElementById("user_submit").value;
-                                    document.getElementById("user_submit").innerHTML = content;
-                                }
-                                </script> -->
-								<!-- 
-                                用 JavaScript 抓 <textarea> 目前內部現有值請用 value ，抓一開始初始預設值請用 defaultValue ，就是不要用 innerHTML 。因為 <textarea> innerHTML 在 IE 是目前內部現有值，在 Firefox 、 Chrome 是初始預設值。
-                                 <script>
-                                var content = document.getElementById('user_submit');
-                                </script>
-                                <input type="button" value="value" onclick="alert(content.value)">
-                                <input type="button" value="defaultValue" onclick="alert(content.defaultValue)">
-                                <input type="button" value="innerHTML" onclick="alert(content.innerHTML)">
-                                 -->
-								<!-- 測試到這 -->
+<!-- 								  </div> -->
+<!-- 								</div> -->
+
+<!--                                 用 JavaScript 抓 <textarea> 目前內部現有值請用 value ，抓一開始初始預設值請用 defaultValue ，就是不要用 innerHTML 。因為 <textarea> innerHTML 在 IE 是目前內部現有值，在 Firefox 、 Chrome 是初始預設值。 -->
+<!--                                  <script> -->
+<!-- 									var content = document.getElementById('user_submit'); -->
+<!--                                 </script> -->
+<!--                                 <input type="button" value="value" onclick="alert(content.value)"> -->
+<!--                                 <input type="button" value="defaultValue" onclick="alert(content.defaultValue)"> -->
+<!--                                 <input type="button" value="innerHTML" onclick="alert(content.innerHTML)"> -->
+                                
 
 							</div>
 						</div>
 					</div>
                 
-                
-                <div class="postion-left-group-b">
-                    <footer>
-                        <div class="row">
-                            <div class="col-sm-12">
-                                <div class="col-sm-3">
-                                    <p>Copyright 寵物You&amp;Me 2017</p>
-                                </div>
-                                <div class="col-sm-3">
-                                    <p>關於我們</p>
-                                </div>
-                            </div>
-                        </div>
-                    </footer>
-                </div>
-                <a href="#">
-                    <div class="" id="fixedbutton-talk">
-                        <button class="button btn-lg btn-primary active">
-                            交易聊天室
-                        </button>
-                    </div>
-                </a>
-                
+
         </div>
         </div>
 </div>
